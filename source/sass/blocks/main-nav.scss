@@ -1,46 +1,142 @@
 .main-nav {
+  width: 100%;
+  max-width: 1144px;
+
+  @include vp-1439 {
+    width: auto;
+    max-width: unset;
+  }
+
+  @include vp-1279 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 215px;
+  }
+
+  @include vp-767 {
+    max-width: 118px;
+  }
+
+  @include vp-479 {
+    width: auto;
+    max-width: unset;
+  }
+
+  &__user {
+    display: none;
+    margin-right: 40px;
+
+    transition: opacity $trans-default;
+
+    @include vp-1279 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include vp-424 {
+      margin-right: 20px;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 23px;
+      height: 22px;
+    }
+  }
+
   &__toggle {
     z-index: 11;
     position: relative;
     display: none;
 
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 20px;
 
     cursor: pointer;
     user-select: none;
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
-      display: block;
+    @include vp-1279 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    &::before,
-    &::after {
-      content: "";
+    span {
+      display: block;
       position: absolute;
 
       left: 0;
 
       width: 100%;
-      height: 2px;
+      height: 3px;
 
-      background-color: $color-default-white;
+      background-color: $color-red-orange;
 
-      transition: transform $trans-default;
-    }
+      transition: transform $trans-default, opacity $trans-default;
 
-    &::before {
-      top: 10px;
-    }
+      transform: translateY(-50%);
 
-    &::after {
-      bottom: 10px;
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+      }
     }
 
     @include hover-focus {
       opacity: 0.8;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-1279 {
+      z-index: 10;
+      position: fixed;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      top: 63px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      padding: 10px 40px 70px;
+
+      background-color: $color-default-white;
+
+      transition: transform $trans-default;
+      transform: translateX(100%);
+    }
+
+    @include vp-479 {
+      padding: 10px 20px 70px;
+    }
+
+    @include vp-374 {
+      padding: 10px 10px 70px;
     }
   }
 
@@ -52,68 +148,107 @@
 
     list-style: none;
 
-    @include vp-767 {
-      z-index: 10;
-      position: fixed;
+    @include vp-1279 {
       flex-direction: column;
-      justify-content: flex-start;
-
-      top: 100px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
       width: 100%;
-      padding: 200px 20px 20px;
-
-      background-color: rgba($color-black-russian, 0.9);
-
-      transition: transform $trans-default, visibility $trans-default, opacity $trans-default;
-      transform: translateX(100%);
-
-      //visibility: hidden;
-      //opacity: 0;
+      margin: 0 0 40px;
     }
   }
 
   &__item {
-    margin-right: 60px;
+    position: relative;
+    margin-right: 36px;
 
-    @include vp-1023 {
-      margin-right: 30px;
+    @include vp-1439 {
+      margin-right: 20px;
     }
 
-    @include vp-767 {
+    @include vp-1279 {
       margin-right: 0;
-      margin-bottom: 30px;
     }
 
     &:last-child {
       margin-right: 0;
+    }
 
-      @include vp-767 {
-        margin-bottom: 0;
+    &::after {
+      content: none;
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: rgba($color-default-black, 0.5);
+
+      @include vp-1279 {
+        content: "";
       }
     }
   }
 
   &__link {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
-    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 
-    color: $color-default-white;
+    color: $color-nero;
 
-    transition: opacity $trans-default;
+    transition: color $trans-default;
     transform: translate3d(0, 0, 0);
 
-    &.is-active {
-      color: $color-summer-sky;
+    @include vp-1279 {
+      padding: 10px 0;
+    }
 
-      pointer-events: none;
+    svg {
+      display: none;
+
+      flex-shrink: 0;
+
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+
+      transition: transform $trans-default;
+
+      @include vp-1279 {
+        display: block;
+      }
+    }
+
+    @include hover-focus {
+      color: $color-red-orange;
+    }
+  }
+
+  &__phone {
+    display: block;
+    margin-left: 40px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-red-orange;
+
+    transition: opacity $trans-default;
+
+    @include vp-1439 {
+      margin-left: 20px;
+    }
+
+    @include vp-1279 {
+      margin-left: 0;
+
+      font-size: 18px;
+      line-height: 27px;
     }
 
     @include hover-focus {

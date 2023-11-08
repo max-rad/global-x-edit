@@ -1,21 +1,99 @@
 mixin intro()
+  -
+    const list = [
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "740",
+          height: "678",
+          alt: "background"
+        }
+      },
+      {
+        title: "Север-Связь",
+        description: "Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса",
+        image: {
+          src: "intro-background",
+          format: "png",
+          width: "548",
+          height: "528",
+          alt: "background"
+        }
+      }
+    ]
+
   section.intro
-    .intro__background
-      +picture("content", "intro-background", "png", 1920, 850, "background")
     .container
       .intro__wrapper
-        h1.intro__title
-          span Lorem ipsum
-          = " dolor sit ametconsectetur "
-          span adipiscing
-        p.intro__description At&nbsp;vero eos et&nbsp;accusamus et&nbsp;iusto odio dignissimos
-        ul.intro__list
-          li.intro__item
-            span Totam rem aperiam eaque ipsa
-          li.intro__item
-            span Sit voluptatem accusantium doloremque laudantium
-          li.intro__item
-            span Sed ut perspiciatis, unde omnis iste natus error
-        .intro__buttons
-          +btn({text: "заказать", type: "button"}).intro__button
-          +btn({text: "подробнее", type: "button"}).btn--white.intro__button
+        h1.visually-hidden Север-Связь
+        .intro__slider.swiper(data-slider="intro")
+          .intro__slides.swiper-wrapper
+            each item in list
+              .intro__slide.swiper-slide
+                .intro__info
+                  h2.intro__title!=item.title
+                  p.intro__description!=item.description
+                  +btn({href: "#", text: "Подключить сейчас"}).intro__button
+                .intro__image-wrapper
+                  +img('content/intro', item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+          .swiper-button-prev
+          .swiper-button-next
+          .swiper-pagination

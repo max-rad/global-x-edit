@@ -1,0 +1,97 @@
+.info-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 10px 0 10px;
+
+  border: 1px solid $color-gainsboro;
+  background-color: $color-default-white;
+
+  @include vp-1279 {
+    position: relative;
+
+    border: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(1440px + 40px * 2);
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @include vp-1439 {
+      padding: 0 30px;
+    }
+
+    @include vp-1279 {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__item {
+    margin-right: 60px;
+
+    @include vp-1279 {
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $color-grey;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $color-nero;
+
+    transition: opacity $trans-default;
+
+    @include vp-1279 {
+      display: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 20px;
+      height: 12px;
+      margin-left: 10px;
+    }
+  }
+}

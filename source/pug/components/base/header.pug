@@ -1,38 +1,53 @@
 mixin header(headerMods, currentUrl)
   -
-    const headerLinks = [
+    const navLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "Интернет",
       },
       {
         href: "#",
-        text: "О нас"
+        text: "Телевидение"
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Выгодно"
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "Видеонаблюдение"
+      },
+      {
+        href: "#",
+        text: "Оборудование"
+      },
+      {
+        href: "#",
+        text: "Информация"
+      },
+      {
+        href: "#",
+        text: "Контакты"
       }
     ]
 
   header.header(class=headerMods data-header)
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
-          span.header__logo
-            +icon("logo", 247, 35)
-        else
-          a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +icon("logo", 199, 43)
         nav.main-nav
+          a.main-nav__user(href="#" aria-label="Личный кабинет")
+            +icon("icon-user", 23, 22)
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-toggle-menu).btn-reset.main-nav__toggle
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
-
+            span
+            span
+            span
+          .main-nav__menu
+            +info-bar()
+            ul.list-reset.main-nav__list
+              each item in navLinks
+                li.main-nav__item
+                  a.main-nav__link(href=item.href)!=item.text
+                    +icon("icon-chevron-right", 24, 24)
+            a.main-nav__phone(href="tel:+73496458000") +7 (3496) 45-80-00

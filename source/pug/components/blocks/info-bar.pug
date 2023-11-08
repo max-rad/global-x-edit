@@ -1,0 +1,21 @@
+mixin info-bar()
+  -
+    const barLinks = [
+      {
+        href: "#",
+        text: "Для частных лиц",
+      },
+      {
+        href: "#",
+        text: "Для бизнеса",
+      }
+    ]
+
+  .info-bar
+    .info-bar__wrapper
+      ul.list-reset.info-bar__list
+        each item in barLinks
+          li.info-bar__item
+            a(href=item.href).info-bar__link!=item.text
+      a.info-bar__user(href="#") Личный кабинет
+        +icon("icon-login", 20, 12)

@@ -3,22 +3,21 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 14px 9px;
+  padding: 13px 20px;
 
   font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
 
-  border: 1px solid $color-default-white;
-  border-radius: 4px;
-  background-color: $color-summer-sky-2;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-red-orange;
   color: $color-default-white;
 
   cursor: pointer;
   user-select: none;
 
-  transition: opacity $trans-default;
+  transition: background-color $trans-default, color $trans-default;
 
   outline: none;
 
@@ -29,6 +28,17 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    background-color: $color-flamingo;
+    color: rgba($color-default-white, 0.9)
+  }
+
+  @include active {
+    background-color: $color-free-speech-red;
+    color: rgba($color-default-white, 0.9)
+  }
+
+  &.disabled {
+    background-color: $color-silver;
+    color: rgba($color-default-white, 0.9)
   }
 }
