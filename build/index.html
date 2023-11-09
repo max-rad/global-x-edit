@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header" data-header>
+      <header class="header" data-header data-media="(min-width: 1279px)">
         <div class="container">
           <div class="header__wrapper"><a class="header__logo" href="index.html" aria-label="Переход на главную">
               <svg width="199" height="43" aria-hidden="true">
@@ -40,35 +40,58 @@
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Интернет
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
+                      </svg></a>
+                  </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Телевидение
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
-                  <li class="main-nav__item"><a class="main-nav__link" href="#">Выгодно
+                      </svg></a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">Выгодно
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
+                      </svg></a>
+                    <div class="main-nav__dropdown">
+                      <ul class="list-reset main-nav__dropdown-list">
+                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Интернет+TV</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Конструктор тарифа</a></li>
+                      </ul>
+                    </div>
+                  </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Видеонаблюдение
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
+                      </svg></a>
+                  </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Оборудование
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
-                  <li class="main-nav__item"><a class="main-nav__link" href="#">Информация
+                      </svg></a>
+                  </li>
+                  <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">Информация
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
+                      </svg></a>
+                    <div class="main-nav__dropdown">
+                      <ul class="list-reset main-nav__dropdown-list">
+                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Новости</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Вакансии</a></li>
+                      </ul>
+                    </div>
+                  </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
-                      </svg></a></li>
+                      </svg></a>
+                  </li>
                 </ul><a class="main-nav__phone" href="tel:+73496458000">+7 (3496) 45-80-00</a>
               </div>
             </nav>
           </div>
+          <div class="widget"><a class="widget__link" href="#">Оплатить<span>услуги</span>
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="/img/sprite.svg#icon-wallet"></use>
+              </svg></a></div>
         </div>
       </header>
       <main>
@@ -153,6 +176,175 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="type-of-service">
+          <div class="container">
+            <div class="type-of-service__wrapper">
+              <h2 class="visually-hidden">Тип услуг</h2>
+              <ul class="list-reset type-of-service__list">
+                <li class="type-of-service__item"><a class="type-of-service__link" href="#">
+                    <h3 class="type-of-service__title">Для дома</h3>
+                    <div class="type-of-service__image-wrapper"><img src="img/content/type-of-service/house.png" srcset="img/content/type-of-service/house@2x.png 2x" width="129" height="152" alt="house">
+                    </div></a></li>
+                <li class="type-of-service__item"><a class="type-of-service__link" href="#">
+                    <h3 class="type-of-service__title">Для бизнеса</h3>
+                    <div class="type-of-service__image-wrapper"><img src="img/content/type-of-service/rocket.png" srcset="img/content/type-of-service/rocket@2x.png 2x" width="134" height="147" alt="rocket">
+                    </div></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <div class="services__wrapper">
+              <h2 class="services__title title title--h3">Услуги</h2>
+              <ul class="list-reset services__list">
+                <li class="services__item">
+                  <div class="service-card">
+                    <div class="service-card__wrapper">
+                      <div class="service-card__info-wrapper">
+                        <h3 class="service-card__title">Интернет</h3>
+                        <p class="service-card__description">Надежный интернет с&nbsp;высокой скоростью соединения без дополнительных устройств и&nbsp;по&nbsp;доступной цене</p>
+                        <ul class="list-reset service-card__list">
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-global"></use>
+                              </svg>До&nbsp;1000&nbsp;Мбит/с
+                            </p>
+                          </li>
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-shuffle"></use>
+                              </svg>Бесплатное подключение
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="service-card__button-wrapper">
+                          <a class="btn service-card__button" href="#">Подключить
+                          </a>
+                          <p class="service-card__price">от&nbsp;550<span class="service-card__units"><span class="service-card__unit">руб</span><span class="service-card__unit">мес</span></span></p>
+                        </div>
+                      </div>
+                      <div class="service-card__image-wrapper service-card__image-wrapper--first"><img src="img/content/service/image-internet.png" srcset="img/content/service/image-internet@2x.png 2x" width="310" height="340" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="service-card">
+                    <div class="service-card__wrapper">
+                      <div class="service-card__info-wrapper">
+                        <h3 class="service-card__title">TV</h3>
+                        <p class="service-card__description">Смотрите любимые&nbsp;ТВ каналы в&nbsp;отличном качестве</p>
+                        <ul class="list-reset service-card__list">
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-monitor"></use>
+                              </svg>145 уникальных каналов
+                            </p>
+                          </li>
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-cpu-charge"></use>
+                              </svg>15HD каналов высокой четкости
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="service-card__button-wrapper">
+                          <a class="btn service-card__button" href="#">Подключить
+                          </a>
+                          <p class="service-card__price">от&nbsp;200<span class="service-card__units"><span class="service-card__unit">руб</span><span class="service-card__unit">мес</span></span></p>
+                        </div>
+                      </div>
+                      <div class="service-card__image-wrapper service-card__image-wrapper--second"><img src="img/content/service/image-tv.png" srcset="img/content/service/image-tv@2x.png 2x" width="310" height="340" alt="image">
+                        <div class="service-card__background-image"><img src="img/content/service/icon-youtube.png" srcset="img/content/service/icon-youtube@2x.png 2x" width="159" height="141" alt="icon">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="service-card">
+                    <div class="service-card__wrapper">
+                      <div class="service-card__info-wrapper">
+                        <h3 class="service-card__title">Интернет + TV</h3>
+                        <p class="service-card__description">Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене</p>
+                        <ul class="list-reset service-card__list">
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-global"></use>
+                              </svg>Интернет до&nbsp;1000&nbsp;Мбит/с
+                            </p>
+                          </li>
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-devices"></use>
+                              </svg>Пакет цифрового телевидения
+                            </p>
+                          </li>
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-monitor-recorder"></use>
+                              </svg>33&nbsp;канала камер наблюдения
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="service-card__button-wrapper">
+                          <a class="btn service-card__button" href="#">Подключить
+                          </a>
+                          <p class="service-card__price">от&nbsp;650<span class="service-card__units"><span class="service-card__unit">руб</span><span class="service-card__unit">мес</span></span></p>
+                        </div>
+                      </div>
+                      <div class="service-card__image-wrapper service-card__image-wrapper--third"><img src="img/content/service/image-internet-tv.png" srcset="img/content/service/image-internet-tv@2x.png 2x" width="310" height="340" alt="image">
+                        <div class="service-card__background-image"><img src="img/content/service/icon-wifi-2.png" srcset="img/content/service/icon-wifi-2@2x.png 2x" width="112" height="111" alt="icon">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="services__item">
+                  <div class="service-card">
+                    <div class="service-card__wrapper">
+                      <div class="service-card__info-wrapper">
+                        <h3 class="service-card__title">Видеонаблюдение</h3>
+                        <p class="service-card__description">Наблюдайте за&nbsp;вашей недвижимостью в&nbsp;прямом эфире или в&nbsp;записи из&nbsp;любой точки мира</p>
+                        <ul class="list-reset service-card__list">
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-timer"></use>
+                              </svg>Доступ к камерам 24/7
+                            </p>
+                          </li>
+                          <li class="service-card__item">
+                            <p class="service-card__text">
+                              <svg width="24" height="24" aria-hidden="true">
+                                <use xlink:href="/img/sprite.svg#icon-monitor-mobile"></use>
+                              </svg>Просмотр с&nbsp;любых устройствя
+                            </p>
+                          </li>
+                        </ul>
+                        <div class="service-card__button-wrapper">
+                          <a class="btn service-card__button" href="#">Подключить
+                          </a>
+                          <p class="service-card__price">от&nbsp;350<span class="service-card__units"><span class="service-card__unit">руб</span><span class="service-card__unit">мес</span></span></p>
+                        </div>
+                      </div>
+                      <div class="service-card__image-wrapper service-card__image-wrapper--fourth"><img src="img/content/service/image-video.png" srcset="img/content/service/image-video@2x.png 2x" width="310" height="340" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>

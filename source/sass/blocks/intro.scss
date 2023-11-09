@@ -3,27 +3,86 @@
 
   &__wrapper {
     padding: 40px 0 64px;
+
+    @include vp-1023 {
+      padding: 48px 0 100px;
+    }
+
+    @include vp-767 {
+      padding: 80px 0;
+    }
   }
 
   &__slider {
     width: 100%;
+
+    @include vp-1023 {
+      width: calc(100% + 30px);
+    }
+
+    @include vp-767 {
+      width: calc(100% + 45px);
+    }
+
+    @include vp-479 {
+      width: 100%;
+    }
   }
 
   &__slides {
     padding: 0 0 10px;
+
+    @include vp-1023 {
+      padding: 0 0 20px;
+    }
+
+    @include vp-767 {
+      padding: 0 0 30px;
+    }
   }
 
   &__slide {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 120px;
+    padding: 0 100px;
+
+    @include vp-1439 {
+      padding: 0 60px;
+    }
+
+    @include vp-1279 {
+      padding: 0;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
     max-width: 501px;
     margin-right: 150px;
+
+    @include vp-1439 {
+      margin-right: 60px;
+    }
+
+    @include vp-1023 {
+      max-width: 436px;
+      margin-right: 56px;
+    }
+
+    @include vp-767 {
+      max-width: 270px;
+      margin-right: 14px;
+    }
+
+    @include vp-479 {
+      align-items: center;
+      flex-shrink: unset;
+      max-width: unset;
+      margin-right: 0;
+    }
   }
 
   &__title {
@@ -41,34 +100,89 @@
     }
 
     @include vp-767 {
+      margin: 0 0 40px;
+
       font-size: 40px;
       line-height: 40px;
     }
   }
 
   &__description {
-    margin: 0 0 72px;
+    margin: 0 0 70px;
 
     font-size: 400;
     font-size: 18px;
     line-height: 27px;
 
-    color: $color-default-white
+    color: $color-default-white;
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 40px;
+
+      font-size: 22px;
+      line-height: 29px;
+    }
+
+    @include vp-479 {
+      text-align: center;
+    }
   }
 
   &__button {
-    width: 300px;
+    max-width: 300px;
+
+    @include vp-1023 {
+      max-width: 305px;
+    }
+
+    @include vp-767 {
+      max-width: 250px;
+    }
   }
 
   &__image-wrapper {
     width: 548px;
     height: 528px;
 
+    @include vp-1023 {
+      width: 441px;
+      height: 425px;
+    }
+
+    @include vp-767 {
+      width: 317px;
+      height: 300px;
+    }
+
+    @include vp-479 {
+      display: none;
+    }
+
     img {
       width: 548px;
       height: 528px;
 
       object-fit: cover;
+      object-position: left;
+
+      @include vp-1023 {
+        width: 441px;
+        height: 425px;
+      }
+
+      @include vp-767 {
+        width: 317px;
+        height: 300px;
+      }
     }
+  }
+
+  .swiper-pagination {
+    position: relative;
   }
 }

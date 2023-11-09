@@ -18,6 +18,12 @@
   }
 }
 
+@mixin focus-within {
+  &:has(.focus-visible) {
+    @content;
+  }
+}
+
 @mixin active {
   @media (hover: hover) {
     &:active:not(.focus-visible) {

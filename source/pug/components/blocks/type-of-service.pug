@@ -1,0 +1,16 @@
+mixin type-of-service()
+  section.type-of-service
+    .container
+      .type-of-service__wrapper
+        h2.visually-hidden Тип услуг
+        ul.list-reset.type-of-service__list
+          li.type-of-service__item
+            a.type-of-service__link(href="#")
+              h3.type-of-service__title Для дома
+              .type-of-service__image-wrapper
+                +img("content/type-of-service", "house", "png", 129, 152, "house")
+          li.type-of-service__item
+            a.type-of-service__link(href="#")
+              h3.type-of-service__title Для бизнеса
+              .type-of-service__image-wrapper
+                +img("content/type-of-service", "rocket", "png", 134, 147, "rocket")

@@ -8,10 +8,13 @@ export class Header {
     this._scrollLock = new ScrollLock();
     this._focusLock = new FocusLock();
     this._isMenuOpen = false;
+    this._media = document.querySelector('[data-header][data-media]');
+    this._breakpointMedia = null;
 
     this._onToggleClick = this._onToggleClick.bind(this);
     this._onDocumentKeydown = this._onDocumentKeydown.bind(this);
     this._onDocumentClick = this._onDocumentClick.bind(this);
+    this._breakpointChecker = this._breakpointChecker.bind(this);
   }
 
   init() {
@@ -20,6 +23,12 @@ export class Header {
     }
 
     this._toggle.addEventListener('click', this._onToggleClick);
+
+    if (this._media) {
+      this._breakpointMedia = window.matchMedia(this._media.dataset.media);
+      this._breakpointMedia.addEventListener('change', this._breakpointChecker);
+      this._breakpointChecker(this._breakpointMedia);
+    }
   }
 
   _openMenu() {
@@ -56,6 +65,12 @@ export class Header {
 
   _onDocumentClick(evt) {
     if (evt.target.hasAttribute('[data-close-menu]')) {
+      this._closeMenu();
+    }
+  }
+
+  _breakpointChecker(breakpointMedia) {
+    if (breakpointMedia.matches) {
       this._closeMenu();
     }
   }

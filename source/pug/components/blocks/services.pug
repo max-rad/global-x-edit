@@ -1,0 +1,175 @@
+mixin services()
+  -
+    const list = [
+      {
+        title: "Интернет",
+        description: "Надежный интернет с&nbsp;высокой скоростью соединения без дополнительных устройств и&nbsp;по&nbsp;доступной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "До&nbsp;1000&nbsp;Мбит/с"
+          },
+          {
+            icon: {
+              name: "icon-shuffle",
+              width: "24",
+              height: "24"
+            },
+            text: "Бесплатное подключение"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;550",
+        image: {
+          mod: 'first',
+          src: "image-internet",
+          format: "png",
+          width: "310",
+          height: "340",
+          alt: "image"
+        },
+      },
+      {
+        title: "TV",
+        description: "Смотрите любимые&nbsp;ТВ каналы в&nbsp;отличном качестве",
+        info: [
+          {
+            icon: {
+              name: "icon-monitor",
+              width: "24",
+              height: "24"
+            },
+            text: "145 уникальных каналов"
+          },
+          {
+            icon: {
+              name: "icon-cpu-charge",
+              width: "24",
+              height: "24"
+            },
+            text: "15HD каналов высокой четкости"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;200",
+        image: {
+          mod: 'second',
+          src: "image-tv",
+          format: "png",
+          width: "310",
+          height: "340",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-youtube",
+          format: "png",
+          width: "159",
+          height: "141",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Интернет + TV",
+        description: "Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "Интернет до&nbsp;1000&nbsp;Мбит/с"
+          },
+          {
+            icon: {
+              name: "icon-devices",
+              width: "24",
+              height: "24"
+            },
+            text: "Пакет цифрового телевидения"
+          },
+          {
+            icon: {
+              name: "icon-monitor-recorder",
+              width: "24",
+              height: "24"
+            },
+            text: "33&nbsp;канала камер наблюдения"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;650",
+        image: {
+          mod: 'third',
+          src: "image-internet-tv",
+          format: "png",
+          width: "310",
+          height: "340",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-wifi-2",
+          format: "png",
+          width: "112",
+          height: "111",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Видеонаблюдение",
+        description: "Наблюдайте за&nbsp;вашей недвижимостью в&nbsp;прямом эфире или в&nbsp;записи из&nbsp;любой точки мира",
+        info: [
+          {
+            icon: {
+              name: "icon-timer",
+              width: "24",
+              height: "24"
+            },
+            text: "Доступ к камерам 24/7"
+          },
+          {
+            icon: {
+              name: "icon-monitor-mobile",
+              width: "24",
+              height: "24"
+            },
+            text: "Просмотр с&nbsp;любых устройствя"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;350",
+        image: {
+          mod: 'fourth',
+          src: "image-video",
+          format: "png",
+          width: "310",
+          height: "340",
+          alt: "image"
+        },
+      }
+    ]
+
+  section.services
+    .container
+      .services__wrapper
+        h2.services__title.title.title--h3 Услуги
+        ul.list-reset.services__list
+          each item in list
+            li.services__item
+              +service-card(item)

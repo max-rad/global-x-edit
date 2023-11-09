@@ -50,6 +50,11 @@
 
       width: 23px;
       height: 22px;
+
+      @include vp-479 {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -132,6 +137,8 @@
     }
 
     @include vp-479 {
+      top: 48px;
+
       padding: 10px 20px 70px;
     }
 
@@ -167,8 +174,28 @@
       margin-right: 0;
     }
 
-    &:last-child {
-      margin-right: 0;
+    &--dropdown {
+      @media (min-width: 1280px) {
+        @include focus-within {
+          .main-nav__dropdown::before {
+            content: "";
+          }
+
+          .main-nav__dropdown {
+            display: block;
+          }
+        }
+
+        @include hover-focus {
+          .main-nav__dropdown::before {
+            content: "";
+          }
+
+          .main-nav__dropdown {
+            display: block;
+          }
+        }
+      }
     }
 
     &::after {
@@ -186,6 +213,10 @@
       @include vp-1279 {
         content: "";
       }
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
@@ -225,6 +256,72 @@
 
     @include hover-focus {
       color: $color-red-orange;
+    }
+  }
+
+  &__dropdown {
+    z-index: 10;
+    position: absolute;
+    display: none;
+    top: calc(100% + 19px);
+    left: 0;
+
+    @include vp-1279 {
+      position: relative;
+      display: block;
+
+      top: 0;
+      left: 0;
+
+      max-height: 0;
+      overflow: hidden;
+
+      transition: max-height $trans-default;
+    }
+
+    &::before {
+      content: none;
+      position: absolute;
+      top: -19px;
+      left: 0;
+
+      width: 100%;
+      height: 19px;
+    }
+  }
+
+  &__dropdown-list {
+    padding: 26px 28px 20px;
+
+    background-color: $color-default-white;
+  }
+
+  &__dropdown-item {
+    position: relative;
+
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: $color-whisper;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      &::after {
+        content: none;
+      }
     }
   }
 
