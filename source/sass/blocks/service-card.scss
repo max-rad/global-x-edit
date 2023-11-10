@@ -68,6 +68,11 @@
       line-height: 37px;
     }
 
+    @include vp-479 {
+      font-size: 24px;
+      line-height: 33px;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -243,9 +248,6 @@
     position: relative;
     flex-shrink: 0;
 
-    width: 310px;
-    height: 340px;
-
     @include vp-1023 {
       position: absolute;
 
@@ -258,13 +260,13 @@
     }
 
     img {
-      width: 310px;
-      height: 340px;
-
       object-fit: cover;
     }
 
     &--first {
+      width: 290px;
+      height: 196px;
+
       @include vp-1023 {
         width: 185px;
         height: 124px;
@@ -276,6 +278,9 @@
       }
 
       img {
+        width: 290px;
+        height: 196px;
+
         @include vp-1023 {
           width: 185px;
           height: 124px;
@@ -289,6 +294,9 @@
     }
 
     &--second {
+      width: 251px;
+      height: 269px;
+
       @include vp-1023 {
         width: 182px;
         height: 175px;
@@ -300,6 +308,9 @@
       }
 
       img {
+        width: 251px;
+        height: 269px;
+
         @include vp-1023 {
           width: 182px;
           height: 175px;
@@ -312,8 +323,8 @@
       }
 
       .service-card__background-image {
-        top: 76px;
-        right: 7px;
+        top: 24px;
+        right: 6px;
 
         width: 159px;
         height: 141px;
@@ -353,6 +364,7 @@
 
     &--third {
       width: 336px;
+      height: 236px;
 
       @include vp-1023 {
         width: 180px;
@@ -366,6 +378,7 @@
 
       img {
         width: 336px;
+        height: 236px;
 
         @include vp-1023 {
           width: 180px;
@@ -379,7 +392,7 @@
       }
 
       .service-card__background-image {
-        top: 58px;
+        top: 6px;
         right: 95px;
 
         width: 112px;
@@ -414,6 +427,135 @@
             width: 43px;
             height: 47px;
           }
+        }
+      }
+    }
+
+    &--fourth {
+      width: 259px;
+      height: 235px;
+
+      @include vp-1023 {
+        width: 180px;
+        height: 161px;
+      }
+
+      @include vp-767 {
+        width: 97px;
+        height: 87px;
+      }
+
+      img {
+        width: 259px;
+        height: 235px;
+
+        @include vp-1023 {
+          width: 180px;
+          height: 161px;
+        }
+
+        @include vp-767 {
+          width: 97px;
+          height: 87px;
+        }
+      }
+    }
+
+    &--fifth {
+      width: 356px;
+      height: 251px;
+
+      @include vp-1023 {
+        width: 196px;
+        height: 141px;
+      }
+
+      @include vp-767 {
+        width: 120px;
+        height: 112px;
+      }
+
+      img {
+        width: 356px;
+        height: 251px;
+
+        @include vp-1023 {
+          width: 196px;
+          height: 141px;
+        }
+
+        @include vp-767 {
+          width: 120px;
+          height: 112px;
+        }
+      }
+
+      .service-card__background-image {
+        top: 0px;
+        right: 113px;
+
+        width: 112px;
+        height: 111px;
+
+        @include vp-1023 {
+          top: 0px;
+          right: 46px;
+
+          width: 61px;
+          height: 65px;
+        }
+
+        @include vp-767 {
+          top: 2px;
+          right: 34px;
+
+          width: 43px;
+          height: 47px;
+        }
+
+        img {
+          width: 112px;
+          height: 111px;
+
+          @include vp-1023 {
+            width: 61px;
+            height: 65px;
+          }
+
+          @include vp-767 {
+            width: 43px;
+            height: 47px;
+          }
+        }
+      }
+    }
+
+    &--sixth {
+      width: 243px;
+      height: 269px;
+
+      @include vp-1023 {
+        width: 152px;
+        height: 167px;
+      }
+
+      @include vp-767 {
+        width: 107px;
+        height: 112px;
+      }
+
+      img {
+        width: 243px;
+        height: 269px;
+
+        @include vp-1023 {
+          width: 152px;
+          height: 167px;
+        }
+
+        @include vp-767 {
+          width: 107px;
+          height: 112px;
         }
       }
     }

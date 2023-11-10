@@ -30,9 +30,9 @@ mixin services()
         image: {
           mod: 'first',
           src: "image-internet",
-          format: "png",
-          width: "310",
-          height: "340",
+          format: "webp",
+          width: "291",
+          height: "196",
           alt: "image"
         },
       },
@@ -65,14 +65,14 @@ mixin services()
         image: {
           mod: 'second',
           src: "image-tv",
-          format: "png",
-          width: "310",
-          height: "340",
+          format: "webp",
+          width: "251",
+          height: "269",
           alt: "image"
         },
         backgroundImage: {
           src: "icon-youtube",
-          format: "png",
+          format: "webp",
           width: "159",
           height: "141",
           alt: "icon"
@@ -115,14 +115,14 @@ mixin services()
         image: {
           mod: 'third',
           src: "image-internet-tv",
-          format: "png",
-          width: "310",
-          height: "340",
+          format: "webp",
+          width: "336",
+          height: "236",
           alt: "image"
         },
         backgroundImage: {
           src: "icon-wifi-2",
-          format: "png",
+          format: "webp",
           width: "112",
           height: "111",
           alt: "icon"
@@ -157,9 +157,92 @@ mixin services()
         image: {
           mod: 'fourth',
           src: "image-video",
-          format: "png",
-          width: "310",
-          height: "340",
+          format: "webp",
+          width: "259",
+          height: "235",
+          alt: "image"
+        }
+      },
+      {
+        title: "Оборудование",
+        description: "Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-key-square",
+              width: "24",
+              height: "24"
+            },
+            text: "Услуги связи и&nbsp;оборудование под ключ"
+          },
+          {
+            icon: {
+              name: "icon-home-wifi",
+              width: "24",
+              height: "24"
+            },
+            text: "Быстрая настройка и&nbsp;экономия времени"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Узнать подробнее"
+        },
+        image: {
+          mod: 'fifth',
+          src: "image-equipment",
+          format: "webp",
+          width: "356",
+          height: "251",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-wifi-3",
+          format: "webp",
+          width: "112",
+          height: "111",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Конструктор тарифа",
+        description: "Соберите свой пакет услуг и&nbsp;получите самую выгодную цену",
+        info: [
+          {
+            icon: {
+              name: "icon-timer-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Выберите скорость"
+          },
+          {
+            icon: {
+              name: "icon-task-square-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Отрегулируйте услуги"
+          },
+          {
+            icon: {
+              name: "icon-empty-wallet-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Получите цену"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Узнать подробнее"
+        },
+        image: {
+          mod: 'sixth',
+          src: "image-tariff",
+          format: "webp",
+          width: "356",
+          height: "251",
           alt: "image"
         },
       }
@@ -168,7 +251,7 @@ mixin services()
   section.services
     .container
       .services__wrapper
-        h2.services__title.title.title--h3 Услуги
+        h2.title.title--h3 Услуги
         ul.list-reset.services__list
           each item in list
             li.services__item

@@ -1,0 +1,27 @@
+mixin feedback()
+  section.feedback
+    .container
+      .feedback__wrapper
+        h2.title.title--h3 Задать вопрос
+        .feedback__content
+          .feedback__form
+            form(method="post")
+              +custom-input({
+                label: "*Ваше имя",
+                type: "text",
+                name: "name"
+              }).feedback__input
+              +custom-input({
+                label: "*Ваше имя",
+                type: "text",
+                name: "name"
+              }).feedback__input
+              +custom-textarea({
+                label: "Ваш вопрос",
+                name: "question"
+              }).feedback__textarea
+              +btn({type: "button", text: "Отправить"}).feedback__button
+              p.feedback__agreement Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+                a(href="#") политикой обработки персональных данных
+          .feedback__background
+            +img("content/feedback", "feedback-background", "webp", 683, 525, "background")

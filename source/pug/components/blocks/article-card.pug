@@ -1,0 +1,9 @@
+mixin article-card(data)
+  .article-card
+    .article__info
+      if (data.date)
+        span.article__date!=data.date
+      h2.article__title!=data.title
+      p.article__description!=data.description
+    a.article__link(href="#") Узнать подробнее
+      +icon("icon-arrow-right", 40, 40)

@@ -1,6 +1,19 @@
 .title {
   margin: 0;
 
+  &--h1 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+
   &--h3 {
     margin: 0 0 40px;
 

@@ -1,3 +1,60 @@
 mixin footer(footerMods)
+  -
+    const navLinks = [
+      {
+        href: "#",
+        text: "Интернет"
+      },
+      {
+        href: "#",
+        text: "Пакеты услуг"
+      },
+      {
+        href: "#",
+        text: "Телевидение"
+      },
+      {
+        href: "#",
+        text: "Видеонаблюдение"
+      },
+      {
+        href: "#",
+        text: "Оферта"
+      }
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        a.footer__logo(href="#")
+          +icon("logo-footer", 247, 54)
+        .footer__navigation
+          .footer__content
+            .footer__address
+              p.footer__label Адрес
+              p.footer__text ул. Ленина, 63, Ноябрьск, Ямало-Ненецкий автономный округ
+            .footer__contacts
+              p.footer__label Контакты
+              a.footer__phone(href="tel:+73496458000") Телефон: +7 (3496) 458 000
+              a.footer__email(href="mailto: abon@global-x.ru") E-mail: abon@global-x.ru
+            .footer__services
+              p.footer__label Услуги
+              ul.list-reset.footer__list
+                each item in navLinks
+                  li.footer__item
+                    a.footer__link(href=item.href)!=item.text
+          .footer__additional-content
+            .footer__apps
+              p.footer__label Приложения для мобильных устройств
+              .footer__images
+                .footer__image-wrapper
+                  +img("content", "app-apple", "webp", 137, 38, "Apple app")
+                .footer__image-wrapper
+                  +img("content", "app-google", "webp", 137, 38, "Google app")
+            .footer__payment
+              p.footer__label Оплатить услуги
+              ul.list-reset.footer__list
+                li.footer__item
+                  a.footer__link(href="#") Публичная оферта
+                li.footer__item
+                  a.footer__link(href="#") Политика пресональных данных
