@@ -1,0 +1,280 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Для физических лиц"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "for-individuals.html"
+
+block main
+  main
+    +intro({
+      title: "Услуги связи для квартиры и&nbsp;дома по&nbsp;выгодным ценам в&nbsp;Ноябрьске",
+      button: "true",
+      image: {
+        src: "intro-for-individuals",
+        format: "webp",
+        width: "500",
+        height: "370",
+        alt: "intro"
+      },
+    }).intro--inner-page.intro--for-individuals
+    +available-tariffs({
+      title: "Доступные тарифы",
+      list: [
+      {
+        title: "Интернет",
+        description: "Надежный интернет с&nbsp;высокой скоростью соединения без дополнительных устройств и&nbsp;по&nbsp;доступной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "До&nbsp;1000&nbsp;Мбит/с"
+          },
+          {
+            icon: {
+              name: "icon-shuffle",
+              width: "24",
+              height: "24"
+            },
+            text: "Бесплатное подключение"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;550",
+        image: {
+          mod: 'first',
+          src: "image-internet",
+          format: "webp",
+          width: "291",
+          height: "196",
+          alt: "image"
+        },
+      },
+      {
+        title: "TV",
+        description: "Смотрите любимые&nbsp;ТВ каналы в&nbsp;отличном качестве",
+        info: [
+          {
+            icon: {
+              name: "icon-monitor",
+              width: "24",
+              height: "24"
+            },
+            text: "145 уникальных каналов"
+          },
+          {
+            icon: {
+              name: "icon-cpu-charge",
+              width: "24",
+              height: "24"
+            },
+            text: "15HD каналов высокой четкости"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;200",
+        image: {
+          mod: 'second',
+          src: "image-tv",
+          format: "webp",
+          width: "251",
+          height: "269",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-youtube",
+          format: "webp",
+          width: "159",
+          height: "141",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Интернет + TV",
+        description: "Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "Интернет до&nbsp;1000&nbsp;Мбит/с"
+          },
+          {
+            icon: {
+              name: "icon-devices",
+              width: "24",
+              height: "24"
+            },
+            text: "Пакет цифрового телевидения"
+          },
+          {
+            icon: {
+              name: "icon-monitor-recorder",
+              width: "24",
+              height: "24"
+            },
+            text: "33&nbsp;канала камер наблюдения"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;650",
+        image: {
+          mod: 'third',
+          src: "image-internet-tv",
+          format: "webp",
+          width: "336",
+          height: "236",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-wifi-2",
+          format: "webp",
+          width: "112",
+          height: "111",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Видеонаблюдение",
+        description: "Наблюдайте за&nbsp;вашей недвижимостью в&nbsp;прямом эфире или в&nbsp;записи из&nbsp;любой точки мира",
+        info: [
+          {
+            icon: {
+              name: "icon-timer",
+              width: "24",
+              height: "24"
+            },
+            text: "Доступ к камерам 24/7"
+          },
+          {
+            icon: {
+              name: "icon-monitor-mobile",
+              width: "24",
+              height: "24"
+            },
+            text: "Просмотр с&nbsp;любых устройствя"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Подключить"
+        },
+        price: "от&nbsp;350",
+        image: {
+          mod: 'fourth',
+          src: "image-video",
+          format: "webp",
+          width: "259",
+          height: "235",
+          alt: "image"
+        }
+      },
+      {
+        title: "Оборудование",
+        description: "Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене",
+        info: [
+          {
+            icon: {
+              name: "icon-key-square",
+              width: "24",
+              height: "24"
+            },
+            text: "Услуги связи и&nbsp;оборудование под ключ"
+          },
+          {
+            icon: {
+              name: "icon-home-wifi",
+              width: "24",
+              height: "24"
+            },
+            text: "Быстрая настройка и&nbsp;экономия времени"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Узнать подробнее"
+        },
+        image: {
+          mod: 'fifth',
+          src: "image-equipment",
+          format: "webp",
+          width: "356",
+          height: "251",
+          alt: "image"
+        },
+        backgroundImage: {
+          src: "icon-wifi-3",
+          format: "webp",
+          width: "112",
+          height: "111",
+          alt: "icon"
+        }
+      },
+      {
+        title: "Конструктор тарифа",
+        description: "Соберите свой пакет услуг и&nbsp;получите самую выгодную цену",
+        info: [
+          {
+            icon: {
+              name: "icon-timer-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Выберите скорость"
+          },
+          {
+            icon: {
+              name: "icon-task-square-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Отрегулируйте услуги"
+          },
+          {
+            icon: {
+              name: "icon-empty-wallet-red",
+              width: "24",
+              height: "24"
+            },
+            text: "Получите цену"
+          }
+        ],
+        button: {
+          href: "#",
+          text: "Узнать подробнее"
+        },
+        image: {
+          mod: 'sixth',
+          src: "image-tariff",
+          format: "webp",
+          width: "356",
+          height: "251",
+          alt: "image"
+        },
+      }
+    ]
+    })
+    +custom-tariff()
+    +advantages()
+    +tariff-advantages()
+    +go-to-personal-account()
+
+block modals

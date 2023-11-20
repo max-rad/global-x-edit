@@ -1,4 +1,4 @@
-mixin intro()
+mixin intro(data)
   -
     const list = [
       {
@@ -80,20 +80,42 @@ mixin intro()
       }
     ]
 
-  section.intro
+  section.intro&attributes(attributes)
     .container
       .intro__wrapper
-        h1.visually-hidden Север-Связь
-        .intro__slider.swiper(data-slider="intro")
-          .intro__slides.swiper-wrapper
-            each item in list
-              .intro__slide.swiper-slide
-                .intro__info
-                  h2.intro__title!=item.title
-                  p.intro__description!=item.description
-                  +btn({href: "#", text: "Подключить сейчас"}).intro__button
-                .intro__image-wrapper
-                  +img('content/intro', item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
-          .swiper-button-prev
-          .swiper-button-next
-          .swiper-pagination
+        if (currentUrl === "index.html")
+          h1.visually-hidden Север-Связь
+          .intro__slider.swiper(data-slider="intro")
+            .intro__slides.swiper-wrapper
+              each item in list
+                .intro__slide.swiper-slide
+                  .intro__info
+                    h2.title.title--h1.intro__title!=item.title
+                    p.intro__description!=item.description
+                    +btn({href: "#", text: "Подключить сейчас"}).intro__button
+                  .intro__image-wrapper
+                    +img('content/intro', item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+            .swiper-button-prev
+            .swiper-button-next
+            .swiper-pagination
+        else
+          .intro__info
+            h1.title.title--h2.intro__title!=data.title
+            if (data.circle)
+              .intro__circle
+                span.intro__text!=data.circle.text
+                span.intro__text.intro__text--small!=data.circle.subtext
+            if (data.list)
+              ul.intro__list
+                each item in data.list
+                  li.intro__item!=item
+            if (data.button)
+              +btn({href: "#", text: "Подключить"}).intro__button
+          .intro__image-wrapper
+            +img('content/intro', data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+          if (data.imageTablet)
+            .intro__image-wrapper.intro__image-wrapper--tablet
+              +img('content/intro', data.imageTablet.src, data.imageTablet.format, data.imageTablet.width, data.imageTablet.height, data.imageTablet.alt)
+          if (data.imageMobile)
+            .intro__image-wrapper.intro__image-wrapper--mobile
+              +img('content/intro', data.imageMobile.src, data.imageMobile.format, data.imageMobile.width, data.imageMobile.height, data.imageMobile.alt)

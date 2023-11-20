@@ -1,0 +1,43 @@
+mixin contacts()
+  section.contacts
+    .container
+      .contacts__wrapper
+        h1.title--t1 Контакты
+        .contacts__content
+          ul.list-reset.contacts__list
+            li.contacts__item
+              p.contacts__label Адрес офиса:
+              p.contacts__text ул. Ленина, 63, Ноябрьск, Ямало-Ненецкий автономный округ
+            li.contacts__item
+              p.contacts__label Время работы офиса:
+              p.contacts__text Ежедневно с&nbsp;10:00 до&nbsp;19:00
+            li.contacts__item
+              p.contacts__label Контакт-центр для физ.лиц:
+              p.contacts__text +7 3496&nbsp;458&nbsp;000
+            li.contacts__item
+              p.contacts__label Контакт-центр для юр.лиц:
+              p.contacts__text +7 3496&nbsp;458&nbsp;288
+            li.contacts__item
+              p.contacts__label Электронная почта:
+              a.contacts__link(href="mailto:abon@global-x.ru") abon@global-x.ru
+          .contacts__form
+            form(method="post")
+              p.contacts__form-label Напишите нам
+              .contacts__form-wrapper
+                +custom-input({
+                  label: "Ваше имя:",
+                  type: "text",
+                  name: "name"
+                }).custom-input--underline.contacts__input
+                +custom-input({
+                  label: "Ваш телефон:",
+                  type: "phone",
+                  name: "phone"
+                }).custom-input--underline.contacts__input
+                +custom-input({
+                  label: "Ваш запрос:",
+                  type: "text",
+                  name: "request"
+                }).custom-input--underline.contacts__input.contacts__input--request
+              +btn({type: "button", text: "Отправить"}).contacts__button
+              +agreement()

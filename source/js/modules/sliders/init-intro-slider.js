@@ -8,6 +8,7 @@ const initIntroSlider = () => {
   const swiper = new Swiper(slider, {
     slidesPerView: 1,
     spaceBetween: 20,
+    speed: 600,
     autoplay: true,
     loop: true,
     navigation: {

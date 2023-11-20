@@ -1,0 +1,298 @@
+.tariff-constructor {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    @include vp-479 {
+      width: calc(100% + 20px * 2);
+      margin: 0 -20px;
+    }
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 558px;
+    column-gap: 56px;
+
+    @include vp-1439 {
+      grid-template-columns: minmax(550px, 1fr) minmax(394px, 558px);
+      column-gap: 20px;
+    }
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+
+      padding: 50px 30px;
+
+      background-color: $color-white-smoke;
+      box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+    }
+
+    @include vp-767 {
+      padding: 50px 20px;
+    }
+  }
+
+  &__options {
+    width: 100%;
+  }
+
+  &__block {
+    margin-bottom: 30px;
+    padding: 20px;
+
+    background-color: $color-white-smoke;
+    box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+    @include vp-1023 {
+      padding: 0;
+
+      background-color: $color-transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__checkbox {
+    margin: 0 0 8px;
+
+    @include vp-1023 {
+      margin: 0 0 28px;
+    }
+
+    &--accordion {
+      display: flex;
+      min-height: 40px;
+      margin: 0;
+
+      @include vp-1023 {
+        z-index: 1;
+        position: relative;
+
+        width: max-content;
+        margin: 0;
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      max-width: 330px;
+    }
+  }
+
+  &__label {
+    margin: 10px 0;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      margin: 20px 0;
+    }
+  }
+
+  &__radio-buttons {
+    display: flex;
+    align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__radio {
+    margin-right: 20px;
+
+    @include vp-767 {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      @include vp-767 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__accordion {
+    width: 100%;
+
+    @include vp-1023 {
+      margin-bottom: 32px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__element {
+    margin-bottom: 30px;
+    padding: 20px;
+
+    background-color: $color-white-smoke;
+    box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+    @include vp-1023 {
+      margin-bottom: 10px;
+      padding: 0;
+
+      background-color: $color-transparent;
+      box-shadow: none;
+    }
+
+    &.is-active {
+      .tariff-constructor__button {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    @include vp-1023 {
+      margin: 0;
+      padding: 10px 20px 10px 30px;
+
+      background-color: $color-whisper-3;
+    }
+
+    @include vp-479 {
+      padding: 10px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @include vp-1023 {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 60px;
+
+      cursor: pointer;
+      user-select: none;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 40px;
+      height: 40px;
+
+      transition: transform $trans-default;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__content-wrapper {
+    @include vp-1023 {
+      padding: 20px 0;
+    }
+
+    @include vp-767 {
+      padding: 15px 0 20px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__term {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24p;
+
+    color: $color-default-black;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 21px;
+      height: 15px;
+      margin-right: 4px;
+    }
+  }
+
+  &__definition {
+    max-width: 674px;
+    margin: 0 0 0 25px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      max-width: 305px;
+    }
+  }
+}

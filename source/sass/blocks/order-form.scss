@@ -1,0 +1,180 @@
+.order-form {
+  &__wrapper {
+    padding: 40px 0;
+
+    @include vp-1023 {
+      padding: 0 0 64px;
+    }
+
+    @include vp-767 {
+      padding: 0 0 60px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 40px 30px;
+    overflow: hidden;
+
+    background-color: $color-white-smoke;
+
+    @include vp-479 {
+      padding: 20px;
+    }
+  }
+
+  &__info-wrapper {
+    position: relative;
+  }
+
+  &__title {
+    @include vp-767 {
+      max-width: 340px;
+    }
+  }
+
+  &__description {
+    max-width: 498px;
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      margin: 0 0 32px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 30px  ;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__label {
+    margin: 0 0 32px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 29px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    max-width: 400px;
+    margin-bottom: 42px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+      row-gap: unset;
+      max-width: unset;
+    }
+  }
+
+  &__input {
+    @include vp-1023 {
+      width: 100%;
+      max-width: 301px;
+      margin-bottom: 32px;
+    }
+
+    @include vp-767 {
+      max-width: 241px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+
+    &:last-child {
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 15px;
+
+    @include vp-1023 {
+      max-width: 260px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+
+    top: 49px;
+    right: -13px;
+
+    width: 380px;
+    height: 300px;
+
+    @include vp-1279 {
+      top: 100px;
+    }
+
+    @include vp-1023 {
+      top: 220px;
+
+      width: 276px;
+      height: 208px;
+    }
+
+    @include vp-767 {
+      top: 0;
+      right: -8px;
+
+      width: 169px;
+      height: 126px;
+    }
+
+    @include vp-479 {
+      display: none;
+    }
+
+    img {
+      width: 380px;
+      height: 300px;
+
+      object-fit: contain;
+
+      @include vp-1023 {
+        width: 276px;
+        height: 208px;
+      }
+
+      @include vp-767 {
+        width: 169px;
+        height: 126px;
+      }
+    }
+  }
+}

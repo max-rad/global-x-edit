@@ -1,0 +1,46 @@
+mixin product-features()
+  -
+    list = [
+      {
+        term: "Цвет товара:",
+        description: "Чёрный"
+      },
+      {
+        term: "Тип устройства:",
+        description: "ТВ-приставка"
+      },
+      {
+        term: "Операционная система:",
+        description: "Linux"
+      },
+      {
+        term: "Максимальное разрешение:",
+        description: "FullHD"
+      },
+      {
+        term: "Разрешение видео:",
+        description: "3840x2160 (HDR)"
+      },
+      {
+        term: "Изображение:",
+        description: "JPEG, PNG"
+      },
+      {
+        term: "Память:",
+        description: "RAM 1 Gb, Flash 8 Gb"
+      },
+      {
+        term: "Чипсет:",
+        description: "Amlogic S905W quad core 1,2 ГГц"
+      }
+    ]
+
+  section.product-features
+    .container
+      .product-features__wrapper
+        h2.title.title--t2 Характеристики
+        dl.product-features__list
+          each item in list
+            .product-features__item
+              dt.product-features__term!=item.term
+              dd.product-features__description!=item.description

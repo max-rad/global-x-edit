@@ -1,0 +1,17 @@
+mixin available-tariffs(data)
+  section.available-tariffs&attributes(attributes)
+    .container
+      .available-tariffs__wrapper
+        h2.title.title--t1!=data.title
+        if (currentUrl === "television.html")
+          +digital-television()
+          +package-of-service()
+        else
+          if (data.list)
+            ul.list-reset.available-tariffs__list
+              each item in data.list
+                li.available-tariffs__item
+                  if (currentUrl === "for-individuals.html")
+                    +service-card(item)
+                  else
+                    +tariff-card(item, data.mod)

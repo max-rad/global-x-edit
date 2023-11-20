@@ -1,0 +1,229 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Интернет + TV"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "internet-and-tv.html"
+
+block main
+  main
+    +intro({
+      title: "Интернет + TV&nbsp;самый выгодный тариф в&nbsp;Ноябрьске",
+      button: "true",
+      list: [
+        "Безлимитный интернет&nbsp;&mdash; до&nbsp;1000&nbsp;Мбит/c",
+        "15&nbsp;HD каналов онлайн высокой четкости",
+        "Цифровое телевидение&nbsp;&mdash; 146 уникальных каналов",
+        "Тв-приставка, в&nbsp;которой множество удобных опций: управление просмотром, медиаплеер, YouTube Kids, онлайн-кинотеатр"
+      ],
+      image: {
+        src: "intro-internet+tv",
+        format: "webp",
+        width: "920",
+        height: "512",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--internet-and-tv
+    +features({
+      title: "Наши преимущества",
+      list: [
+        {
+          icon: {
+            name: "icon-video-red",
+            width: "64",
+            height: "64"
+          },
+          description: "30&nbsp;каналов городских видеокамер нашего года"
+        },
+        {
+          icon: {
+            name: "icon-electricity",
+            width: "64",
+            height: "64"
+          },
+          description: "Без дополнительного оборудования"
+        },
+        {
+          icon: {
+            name: "icon-monitor-red",
+            width: "64",
+            height: "64"
+          },
+          description: "Количество подключаемых телевизоров не&nbsp;ограниченно"
+        },
+        {
+          icon: {
+            name: "icon-monitor-mobile-red",
+            width: "64",
+            height: "64"
+          },
+          description: "Доступный сервис в&nbsp;приложении на&nbsp;разных устройствах"
+        }
+      ]
+    })
+    +available-tariffs({
+      title: "Доступные тарифы Интернет + TV",
+      list: [
+        {
+          popular: "true",
+          title: "Стартовый - Акция",
+          description: "Только для новых абонентов. Наслаждайтесь высокоскоростным, безлимитным, интернетом с&nbsp;цифровым телевидением",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "100&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "0",
+          text: "Со&nbsp;второго месяца 599 руб"
+        },
+        {
+          title: "Стартовый",
+          description: "Наслаждайтесь высокоскоростным, безлимитным, интернетом с&nbsp;цифровым телевидением",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "100&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "599"
+        },
+        {
+          popular: "true",
+          title: "Особый - Акция",
+          description: "Только для новых абонентов. Подключайте надежный интернет с&nbsp;высокой скоростью загрузки и&nbsp;цифровое телевидение отличного качества",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "350&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "0",
+          text: "Со&nbsp;второго месяца 699 руб"
+        },
+        {
+          title: "Особый",
+          description: "Подключайте надежный интернет с&nbsp;высокой скоростью загрузки и&nbsp;цифровое телевидение отличного качества",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "350&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "850"
+        },
+        {
+          popular: "true",
+          title: "Премиум",
+          description: "Используйте все возможности цифрового телевидения и&nbsp;безлимитного интернета на&nbsp;максимум",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "1000&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "1000"
+        },
+        {
+          popular: "true",
+          title: "Базовый",
+          description: "Наслаждайтесь высокоскоростным, безлимитным, интернетом с&nbsp;цифровым телевидением",
+          features: [
+            {
+              icon: {
+                name: "icon-global",
+                width: "24",
+                height: "24"
+              },
+              title: "100&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            },
+            {
+              icon: {
+                name: "icon-monitor",
+                width: "24",
+                height: "24"
+              },
+              title: "Пакет цифрового телевидения",
+            }
+          ],
+          price: "650"
+        }
+      ],
+      mod: "tariff-card--postscript"
+    }).available-tariffs--internet-and-tv
+    +available-equipment()
+    +steps()
+    +channel-list()
+    +feedback()
+
+block modals

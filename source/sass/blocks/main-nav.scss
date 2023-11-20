@@ -1,6 +1,7 @@
 .main-nav {
   width: 100%;
   max-width: 1144px;
+  /* overflow: hidden; */
 
   @include vp-1439 {
     width: auto;
@@ -88,9 +89,7 @@
 
       background-color: $color-red-orange;
 
-      transition: transform $trans-default, opacity $trans-default;
-
-      transform: translateY(-50%);
+      transition: transform $trans-default, opacity $trans-default, visibility $trans-default;
 
       &:nth-child(1) {
         top: 0;
@@ -98,6 +97,8 @@
 
       &:nth-child(2) {
         top: 50%;
+
+        transform: translateY(-50%);
       }
 
       &:nth-child(3) {
@@ -140,10 +141,6 @@
       top: 48px;
 
       padding: 10px 20px 70px;
-    }
-
-    @include vp-374 {
-      padding: 10px 10px 70px;
     }
   }
 
@@ -266,6 +263,8 @@
     top: calc(100% + 19px);
     left: 0;
 
+    width: 225px;
+
     @include vp-1279 {
       position: relative;
       display: block;
@@ -291,9 +290,24 @@
   }
 
   &__dropdown-list {
+    position: relative;
     padding: 26px 28px 20px;
 
     background-color: $color-default-white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: calc(100% - 28px * 2);
+      height: 1px;
+
+      background-color: $color-whisper;
+
+      transform: translateX(-50%);
+    }
   }
 
   &__dropdown-item {

@@ -1,0 +1,107 @@
+.single-article {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__date {
+    display: block;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: rgba($color-default-black, 0.5);
+  }
+
+  &__title {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      margin: 0 0 20px;
+
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 44px;
+    }
+
+    &--small {
+      margin: 0 0 40px;
+
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 40px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    @include vp-479 {
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  &__content {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-default-black;
+
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+    }
+  }
+
+  &__phone {
+    margin: 0 0 15px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: $color-default-black;
+  }
+
+  &__email {
+    margin: 0;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: $color-default-black;
+  }
+}

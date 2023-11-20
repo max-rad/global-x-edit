@@ -1,0 +1,27 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Конструктор тарифа"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "tariff-constructor.html"
+
+block main
+  main
+    +intro({
+      title: "Соберите свой тариф для развлечения, учёбы или работы",
+      image: {
+        src: "intro-tariff-constructor",
+        format: "webp",
+        width: "300",
+        height: "300",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--tariff-constructor
+    +tariff-constructor()
+    +feedback()
+
+block modals

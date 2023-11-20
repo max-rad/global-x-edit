@@ -1,0 +1,305 @@
+.business-instruments {
+  &__wrapper {
+    padding: 0 0 64px;
+
+    @include vp-767 {
+      padding: 0 0 60px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 32px 40px;
+
+    background-color: $color-white-smoke;
+
+    @include vp-1023 {
+      padding: 40px 30px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: $color-default-black;
+
+    @include vp-1199 {
+      max-width: 500px;
+    }
+
+    @include vp-1023 {
+      margin: 0 0 4px;
+    }
+
+    @include vp-767 {
+      max-width: 294px;
+      margin: 0 0 20px;
+
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+  }
+
+  &__description {
+    max-width: 482px;
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      max-width: 330px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+  }
+
+  &__label {
+    margin: 0 0 30px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 22px;
+      line-height: 29px;
+    }
+
+    @include vp-767 {
+      max-width: 303px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    margin-bottom: 40px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+      row-gap: unset;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    max-width: 180px;
+
+    @include vp-1023 {
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    @include vp-767 {
+      max-width: 260px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+
+    &:last-child {
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 15px;
+
+    @include vp-1023 {
+      max-width: 260px;
+    }
+
+    @include vp-479 {
+      max-width: unset;
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    img {
+      object-fit: cover;
+    }
+
+    &--first {
+      right: 203px;
+      bottom: 64px;
+
+      width: 250px;
+      height: 250px;
+
+      transform: rotate(-15deg);
+
+      @include vp-1199 {
+        top: 6px;
+        right: 3px;
+        bottom: unset;
+
+        width: 133px;
+        height: 133px;
+      }
+
+      @include vp-767 {
+        top: 0;
+        right: 0;
+
+        width: 103px;
+        height: 103px;
+      }
+
+      @include vp-479 {
+        display: none;
+      }
+
+      img {
+        width: 250px;
+        height: 250px;
+
+        @include vp-1199 {
+          width: 133px;
+          height: 133px;
+        }
+
+        @include vp-767 {
+          width: 103px;
+          height: 103px;
+        }
+      }
+    }
+
+    &--second {
+      top: 56px;
+      right: 40px;
+
+      width: 100px;
+      height: 100px;
+
+      transform: rotate(160deg);
+      filter: blur(4px);
+
+      @include vp-1199 {
+        top: unset;
+        bottom: 186px;
+        right: 115px;
+
+        width: 70px;
+        height: 70px;
+      }
+
+      @include vp-1023 {
+        bottom: 245px;
+      }
+
+      @include vp-767 {
+        right: 16px;
+        bottom: 383px;
+
+        width: 61px;
+        height: 61px;
+      }
+
+      @include vp-479 {
+        display: none;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+
+        @include vp-1199 {
+          width: 70px;
+          height: 70px;
+        }
+
+        @include vp-767 {
+          width: 61px;
+          height: 61px;
+        }
+      }
+    }
+
+    &--third {
+      right: 55px;
+      bottom: 16px;
+
+      width: 100px;
+      height: 110px;
+
+      transform: rotate(-30deg);
+      filter: blur(2px);
+
+      @include vp-1199 {
+        bottom: 29px;
+        right: 38px;
+
+        width: 82px;
+        height: 89px;
+      }
+
+      @include vp-767 {
+        right: 11px;
+        bottom: 5px;
+
+        width: 49px;
+        height: 53px;
+      }
+
+      @include vp-479 {
+        display: none;
+      }
+
+      img {
+        width: 100px;
+        height: 110px;
+
+        @include vp-1199 {
+          width: 82px;
+          height: 89px;
+        }
+
+        @include vp-767 {
+          width: 49px;
+          height: 53px;
+        }
+      }
+    }
+  }
+}

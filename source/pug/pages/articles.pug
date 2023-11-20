@@ -1,0 +1,35 @@
+extends ../components/base/layout
+
+block variables
+    - const title = "Global X | Статьи"
+    - const wrapperMods = ""
+    - const hasHeader = true
+    - const headerMods = ""
+    - const hasFooter = true
+    - const footerMods = ""
+    - const currentUrl = "articles.html"
+
+block main
+    main
+      +articles({
+        title: "Информация",
+        list: [
+          {
+            date: "22.02.2022",
+            title: "Изменение условий на&nbsp;Тарифные планы",
+            description: "С&nbsp;01.03.2022г. прекращают свое действие архивные тарифные планы."
+          },
+          {
+            date: "19.10.2021",
+            title: "Изменение условий на&nbsp;архивных тарифах с&nbsp;01.11.2021&nbsp;г",
+            description: "С&nbsp;01.03.2022г. прекращают свое действие архивные тарифные планы."
+          },
+          {
+            date: "19.01.2021",
+            title: "Изменение условий на&nbsp;архивных тарифах с&nbsp;01.02.2021&nbsp;г",
+            description: "Обращаем ваше внимание, что с&nbsp;01.02.2021г. прекращают свое действие тарифные планы &laquo;Бро_30&raquo;, &laquo;IPTV Интернет&nbsp;50&raquo;, &laquo;IPTV Выгодный 100&raquo;"
+          }
+        ]
+      })
+
+block modals

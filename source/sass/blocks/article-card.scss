@@ -1,3 +1,112 @@
 .article-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 
+  background: #f8f8f8;
+  box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+  @include vp-1023 {
+    padding: 30px 20px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include vp-479 {
+    padding: 10px;
+  }
+
+  &__info {
+    max-width: 867px;
+    margin-right: 20px;
+
+    @include vp-1023 {
+      max-width: 410px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+
+  &__date {
+    margin: 0 0 5px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $color-nero-2;
+
+    @include vp-1023 {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: $color-nero-2;
+
+    @include vp-1023 {
+      margin: 0 0 10px;
+    }
+
+    @include vp-479 {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: $color-nero-2;
+
+    @include vp-767 {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    color: $color-nero-2;
+
+    transition: opacity $trans-default;
+
+    svg {
+      flex-shrink: 0;
+
+      width: 40px;
+      height: 40px;
+      margin-left: 20px;
+
+      @include vp-1023 {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
 }

@@ -1,0 +1,198 @@
+.custom-tariff {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-1023 {
+      padding: 0 0 64px;
+    }
+
+    @include vp-767 {
+      padding: 0 0 60px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    padding: 40px;
+
+    background-color: $color-white-smoke;
+    box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+    @include vp-479 {
+      padding: 20px;
+    }
+  }
+
+  &__form-wrapper {
+    display: flex;
+
+    @include vp-1023 {
+      flex-direction: column;
+    }
+  }
+
+  &__options {
+    position: relative;
+    padding-right: 180px;
+
+    @include vp-1279 {
+      padding-right: 100px;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 30px;
+      padding-right: 0;
+      padding-bottom: 30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      right: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: $color-light-grey;
+
+      @include vp-1023 {
+        top: unset;
+        right: unset;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    img {
+      flex-shrink: 0;
+
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+
+      object-fit: contain;
+    }
+  }
+
+  &__legend {
+    margin: 0 0 10px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+    line-height: 24px;
+    }
+  }
+
+  &__radio-buttons {
+    margin-bottom: 32px;
+  }
+
+  &__radio {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkboxes {
+    width: 100%;
+  }
+
+  &__checkbox {
+    margin-bottom: 20px;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    max-width: 400px;
+    margin-left: 212px;
+
+    @include vp-1279 {
+      margin-left: 100px;
+    }
+
+    @include vp-1023 {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: $color-default-black;
+
+    @include vp-767 {
+      margin: 0 0 30px;
+
+      font-size: 22px;
+      line-height: 29px;
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 40px;
+  }
+
+  &__input {
+    max-width: 301px;
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 248px;
+    margin: 15px 0 10px;
+
+    @include vp-767 {
+      max-width: 260px;
+      margin: 20px 0 15px;
+    }
+  }
+}

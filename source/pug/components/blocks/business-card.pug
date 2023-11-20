@@ -1,0 +1,16 @@
+mixin business-card(data)
+  .business-card
+    .business-card__wrapper
+      .business-card__info-wrapper
+        h3.business-card__title!=data.title
+        p.business-card__description!=data.description
+        ul.list-reset.business-card__list
+          each item in data.list
+            li.business-card__item
+              p.business-card__text
+                +icon(item.icon.name, item.icon.width, item.icon.height)
+                !=item.text
+        +btn({type: "button", text: "Подключить"}).business-card__button
+      if (data.image)
+        .business-card__image-wrapper
+          +img("content/service", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

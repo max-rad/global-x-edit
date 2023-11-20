@@ -1,0 +1,49 @@
+mixin available-service()
+  -
+    const list = [
+      {
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "380",
+          height: "250",
+          alt: "image"
+        },
+        title: "Городские камеры",
+        description: "Будьте в&nbsp;курсе всех событий не&nbsp;выходя из&nbsp;дома",
+        price: "0"
+      },
+      {
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "380",
+          height: "250",
+          alt: "image"
+        },
+        title: "Дворовые камеры",
+        description: "Наблюдайте за&nbsp;вашим имуществом не&nbsp;выходя из&nbsp;дома через любое устройство",
+        price: "0"
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "380",
+          height: "250",
+          alt: "image"
+        },
+        title: "Персональные камеры",
+        description: "Где&nbsp;бы вы&nbsp;ни&nbsp;находились, вы&nbsp;всегда можете узнать о&nbsp;происходящем дома с&nbsp;любого устройства",
+        price: "350"
+      }
+    ]
+
+  section.available-service
+    .container
+      .available-service__wrapper
+        h2.title.title--t1 Доступные услуги
+        ul.list-reset.available-service__list
+          each item in list
+            li.available-service__item
+              +camera-card(item)

@@ -1,0 +1,67 @@
+mixin custom-tariff()
+  section.custom-tariff
+    .container
+      .custom-tariff__wrapper
+        .custom-tariff__form
+          h2.title.title--t1 Соберите свой тариф
+          form(method="get")
+            .custom-tariff__form-wrapper
+              .custom-tariff__options
+                p.custom-tariff__label
+                  +img("content", "icon-global-red", "webp", 24, 24, "red globe")
+                  | Интернет
+                p.custom-tariff__legend Выберите скорость:
+                .custom-tariff__radio-buttons
+                  +custom-radio({
+                    label: "100 мбит/c",
+                    name: "speed",
+                    value: "100Mbps",
+                    checked: "true"
+                  }).custom-tariff__radio
+                  +custom-radio({
+                    label: "300 мбит/c",
+                    name: "speed",
+                    value: "300Mbps"
+                  }).custom-tariff__radio
+                  +custom-radio({
+                    label: "1000 мбит/c",
+                    name: "speed",
+                    value: "1000Mbps"
+                  }).custom-tariff__radio
+                  +custom-radio({
+                    label: "не знаю",
+                    name: "speed",
+                    value: "dont-know"
+                  }).custom-tariff__radio
+                .custom-tariff__checkboxes
+                  +custom-checkbox({
+                    label: "Телевидение",
+                    name: "tv",
+                    checked: "true"
+                  }).custom-tariff__checkbox
+                  +custom-checkbox({
+                    label: "Видеонаблюдение",
+                    name: "video",
+                    checked: "true"
+                  }).custom-tariff__checkbox
+                  +custom-checkbox({
+                    label: "Статический IP-адрес",
+                    name: "static-ip",
+                    checked: "true"
+                  }).custom-tariff__checkbox
+              .custom-tariff__info
+                p.custom-tariff__title Введите контактные данные
+                .custom-tariff__inputs
+                  +custom-input({
+                    label: "Ваше имя:",
+                    type: "text",
+                    name: "name"
+                  }).custom-input--underline.custom-tariff__input
+                  +custom-input({
+                    label: "Ваш телефон:",
+                    type: "tel",
+                    name: "phone"
+                  }).custom-input--underline.custom-tariff__input
+                +price({label: "Итого:", price: "550"})
+                +btn({type: "submit", text: "Подключить"}).custom-tariff__button
+                +agreement()

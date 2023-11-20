@@ -1,0 +1,91 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Для бизнеса"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "for-business.html"
+
+block main
+  main
+    +intro({
+      title: "Услуги связи для бизнеса в&nbsp;Ноябрьске",
+      button: "true",
+      image: {
+        src: "intro-for-business",
+        format: "webp",
+        width: "830",
+        height: "440",
+        alt: "intro"
+      },
+      circle: {
+        text: "20&nbsp;лет",
+        subtext: "на&nbsp;рынке"
+      }
+    }).intro--inner-page.intro--for-business
+    +business-service()
+    +business-instruments()
+    +features({
+      title: "Наши преимущества",
+      list: [
+        {
+          icon: {
+            name: "icon-clock",
+            width: "64",
+            height: "64"
+          },
+          description: "Подключение любой сложности точно в&nbsp;обозначенный срок"
+        },
+        {
+          text: "IP",
+          description: "Предоставление статического (белого) IP-адреса"
+        },
+        {
+          icon: {
+            name: "icon-global-refresh",
+            width: "64",
+            height: "64"
+          },
+          description: "Мониторинг сети и&nbsp;экспертная техподдержка 24/7"
+        },
+        {
+          icon: {
+            name: "icon-key",
+            width: "64",
+            height: "64"
+          },
+          description: "Подключение под ключ: от подбора до&nbsp;настройки оборудования"
+        },
+        {
+          icon: {
+            name: "icon-electricity",
+            width: "64",
+            height: "64"
+          },
+          description: "Подключение в&nbsp;день <br> обращения"
+        },
+        {
+          icon: {
+            name: "icon-cpu-setting",
+            width: "64",
+            height: "64"
+          },
+          description: "Использование современных технологий в&nbsp;организации услуг"
+        },
+        {
+          icon: {
+            name: "icon-user-tag",
+            width: "64",
+            height: "64"
+          },
+          description: "Персональный <br> менеджер"
+        }
+      ]
+    })
+    +feedback()
+
+
+block modals

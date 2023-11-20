@@ -1,0 +1,154 @@
+mixin business-service()
+  -
+    const list = [
+      {
+        title: "Интернет для бизнеса",
+        description: "Волоконно-оптическая сеть передачи данных по&nbsp;технологии FTTB обеспечит вас высокоскоростным интернетом",
+        list: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "Интернет до&nbsp;10&nbsp;Гбит/сек"
+          },
+          {
+            icon: {
+              name: "icon-user-tick",
+              width: "24",
+              height: "24"
+            },
+            text: "Персональный менеджер"
+          },
+          {
+            icon: {
+              name: "icon-setting",
+              width: "24",
+              height: "24"
+            },
+            text: "Сервисное обслуживание в&nbsp;течении 1&nbsp;дня с&nbsp;момента обращения"
+          }
+        ],
+        image: {
+          src: "image-internet",
+          format: "webp",
+          width: "291",
+          height: "196",
+          alt: "internet"
+        }
+      },
+      {
+        title: "Виртуальные частные сети",
+        description: "Единая высокоскоростная корпоративная сеть, которая обеспечит высокоскоростной и&nbsp;безопасный обмен данными внутри компании, объединяя один или несколько офисов",
+        list: [
+          {
+            icon: {
+              name: "icon-directbox-receive",
+              width: "24",
+              height: "24"
+            },
+            text: "Удобная доставка корреспонденции"
+          },
+          {
+            icon: {
+              name: "icon-shield-tick",
+              width: "24",
+              height: "24"
+            },
+            text: "Гарантированное качество доступа в&nbsp;интернет"
+          }
+        ]
+      },
+      {
+        title: "Телефония",
+        description: "Подключайтесь к&nbsp;IP-телефонии и&nbsp;экономьте свои ресурсы и&nbsp;время",
+        list: [
+          {
+            icon: {
+              name: "icon-volume-high",
+              width: "24",
+              height: "24"
+            },
+            text: "Отличное качество звука"
+          },
+          {
+            icon: {
+              name: "icon-mobile",
+              width: "24",
+              height: "24"
+            },
+            text: "Быстрая настройка переадресации"
+          },
+          {
+            icon: {
+              name: "icon-empty-wallet-tick",
+              width: "24",
+              height: "24"
+            },
+            text: "Программирование и&nbsp;настройка без вызова специалиста"
+          }
+        ]
+      },
+      {
+        title: "Wi-Fi хотспот",
+        description: "Гостевой интернет с&nbsp;идентификацией пользователей в&nbsp;рамках законодательства",
+        list: [
+          {
+            icon: {
+              name: "icon-airdrop",
+              width: "24",
+              height: "24"
+            },
+            text: "Организация Wi-Fi зоны фиксированной сети"
+          },
+          {
+            icon: {
+              name: "icon-building",
+              width: "24",
+              height: "24"
+            },
+            text: "Масштабируемость сети Wi-FI"
+          }
+        ]
+      },
+      {
+        title: "Видеонаблюдение",
+        description: "Безопасность офиса и&nbsp;территории без чрезмерного сетевого трафика и&nbsp;расходов",
+        list: [
+          {
+            icon: {
+              name: "icon-coin",
+              width: "24",
+              height: "24"
+            },
+            text: "Экономия трафика интернета"
+          },
+          {
+            icon: {
+              name: "icon-timer",
+              width: "24",
+              height: "24"
+            },
+            text: "Круглосуточный доступ к&nbsp;камерам"
+          },
+          {
+            icon: {
+              name: "icon-monitor-mobile",
+              width: "24",
+              height: "24"
+            },
+            text: "Просмотр с&nbsp;любых устройств"
+          }
+        ]
+      }
+    ]
+
+  section.business-service
+    .container
+      .business-service__wrapper
+        h2.title.title--t1 Наши услуги
+        ul.list-reset.business-service__list
+          each item in list
+            li.business-service__item
+              +business-card(item)

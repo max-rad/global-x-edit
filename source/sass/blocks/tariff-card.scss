@@ -1,0 +1,256 @@
+.tariff-card {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  padding: 40px 30px;
+
+  background-color: $color-white-smoke;
+  box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+  @include vp-479 {
+    padding: 20px;
+  }
+
+  &--postscript {
+    padding-bottom: 65px;
+
+    @include vp-1023 {
+      padding-bottom: 80px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 40px;
+    }
+
+    @include vp-479 {
+      padding-bottom: 20px;
+    }
+  }
+
+  form {
+    height: 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__icon {
+    position: absolute;
+
+    top: 0;
+    right: 40px;
+
+    width: 30px;
+    height: 61px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 0 0 6px;
+
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      line-height: 36px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      bottom: 0;
+      left: 0;
+
+      width: 30px;
+      height: 1px;
+
+      background-color: $color-default-black;
+    }
+  }
+
+  &__description {
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 35px;
+    }
+  }
+
+  &__list {
+    margin-top: auto;
+    margin-bottom: 60px;
+
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 10px;
+
+    @include vp-1023 {
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    svg {
+      flex-shrink: 0;
+
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    &--big {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+
+      .tariff-card__label {
+        margin: 0 0 4px;
+
+        font-size: 32px;
+        line-height: 42px;
+
+        @include vp-1023 {
+          font-size: 28px;
+          line-height: 37px;
+        }
+      }
+
+      .tariff-card__text {
+        @include vp-1023 {
+          font-size: 16px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 57px;
+
+    @include vp-1023 {
+      margin-bottom: 90px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 70px;
+    }
+
+    .custom-checkbox__label {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__button {
+    flex-shrink: unset;
+
+    width: 100%;
+    max-width: 216px;
+    margin-left: 20px;
+
+    @include vp-767 {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
+
+  &__postscript {
+    position: absolute;
+
+    left: 30px;
+    bottom: 26px;
+
+    margin: 15px 0 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-grey;
+
+    @include vp-1023 {
+      bottom: 40px;
+    }
+
+    @include vp-767 {
+      position: relative;
+
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

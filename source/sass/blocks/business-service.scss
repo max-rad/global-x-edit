@@ -1,0 +1,39 @@
+.business-service {
+  &__wrapper {
+    padding: 64px 0 64px;
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @include vp-1023 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+      row-gap: unset;
+    }
+  }
+
+  &__item {
+    @include vp-1023 {
+      margin-bottom: 30px;
+    }
+
+    &:first-child {
+      grid-column: 1 / 3;
+    }
+
+    &:last-child {
+      @include vp-1023 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

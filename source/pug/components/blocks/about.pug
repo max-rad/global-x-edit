@@ -1,0 +1,20 @@
+mixin about()
+  section.about
+    .container
+      .about__wrapper
+        .about__info-wrapper
+          h2.title.title--t1 Для чего нужен статический IP-адрес
+          p.about__description Постоянный IP-адрес в&nbsp;сети интернет с&nbsp;уникальным индетификатором, к&nbsp;которому вы&nbsp;можете обращаться, как внутри сети, так и&nbsp;снаружи.
+          ul.list-reset.about__list
+            li.about__item
+              +icon("icon-check-mark", 24, 24)
+              p.about__text Возможность организовать размещение в&nbsp;сети собственные веб-ресурсы
+            li.about__item
+              +icon("icon-check-mark", 24, 24)
+              p.about__text Удаленный доступ к&nbsp;компьютеру
+            li.about__item
+              +icon("icon-check-mark", 24, 24)
+              p.about__text Собственный сервис с&nbsp;постоянным адресом
+        .about__image-wrapper
+          +img("content/about", "cables", "webp", "410", "320", "cables")
+

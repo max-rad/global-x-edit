@@ -1,6 +1,8 @@
 import {initCustomSelect} from './modules/custom-select/init-custom-select';
 import {initHeader} from './modules/header/init-header';
 import {initIntroSlider} from './modules/sliders/init-intro-slider';
+import {initAccordions} from './modules/accordion/init-accordion';
+import {initProductSlider} from './modules/sliders/init-product-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -8,5 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initHeader();
     initCustomSelect();
     initIntroSlider();
+    initAccordions();
+    initProductSlider();
   });
 });

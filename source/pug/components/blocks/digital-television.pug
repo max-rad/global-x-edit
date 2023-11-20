@@ -1,0 +1,80 @@
+mixin digital-television()
+  -
+    const list = [
+      {
+        icon: {
+          name: "icon-monitor",
+          width: "24",
+          height: "24"
+        },
+        text: "146 уникальных каналов"
+      },
+      {
+        icon: {
+          name: "icon-lock",
+          width: "24",
+          height: "24"
+        },
+        text: "Защита цифрового сигнала"
+      },
+      {
+        icon: {
+          name: "icon-monitor-recorder",
+          width: "24",
+          height: "24"
+        },
+        text: "10&nbsp;каналов камер наблюдения"
+      },
+      {
+        icon: {
+          name: "icon-electricity",
+          width: "24",
+          height: "24"
+        },
+        text: "Без дополнительного оборудования"
+      },
+      {
+        icon: {
+          name: "icon-cpu-charge",
+          width: "24",
+          height: "24"
+        },
+        text: "15&nbsp;HD каналов онлайн высокой четкости"
+      }
+    ]
+
+  .digital-television
+    .digital-television__info
+      h3.digital-television__title Пакет цифрового телевидения
+      p.digital-television__description Наслаждайтесь современной технологией телевещания с&nbsp;обеспечением высокого качества изображения и&nbsp;получайте захватывающие впечатления от&nbsp;просмотра
+      ul.list-reset.digital-television__list
+        each item in list
+          li.digital-television__item
+            +icon(item.icon.name, item.icon.width, item.icon.height)
+            p.digital-television__text!=item.text
+    .digital-television__form
+      form(method="post")
+        p.digital-television__label Оставьте заявку на подключение услуги телевидения
+        .digital-television__form-wrapper
+          +custom-input({
+                label: "Ваше имя:",
+                type: "text",
+                name: "name"
+              }).custom-input--underline.digital-television__input
+          +custom-input({
+            label: "Ваш телефон:",
+            type: "tel",
+            name: "phone"
+          }).custom-input--underline.digital-television__input
+        .digital-television__button-wrapper
+          +btn({type: "submit", text: "Отправить"}).digital-television__button
+          +price({price: "2800", unit: "год"})
+        +agreement()
+    .digital-television__image-wrapper.digital-television__image-wrapper--first
+      +img("content", "tv-tnt", "webp", 210, 120, "ллоготип ТНТ")
+    .digital-television__image-wrapper.digital-television__image-wrapper--second
+      +img("content", "tv-tv3", "webp", 240, 80, "логотип ТВ3")
+    .digital-television__image-wrapper.digital-television__image-wrapper--third
+      +img("content", "tv-russia24", "webp", 120, 30, "логотип Россия 24")
+    .digital-television__image-wrapper.digital-television__image-wrapper--fourth
+      +img("content", "tv-ctc", "webp", 150, 130, "логотип СТС")

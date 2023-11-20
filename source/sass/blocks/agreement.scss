@@ -1,0 +1,26 @@
+.agreement {
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: $color-nero;
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    a {
+      text-decoration: underline;
+
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.available-service {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-1023 {
+      padding: 64px 0 0;
+    }
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 30px;
+
+    @include vp-1439 {
+      column-gap: 30px;
+    }
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+      row-gap: unset;
+    }
+  }
+
+  &__item {
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      @include vp-767 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

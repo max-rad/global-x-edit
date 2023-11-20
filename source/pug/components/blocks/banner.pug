@@ -1,0 +1,16 @@
+mixin banner()
+  section.banner
+    .container
+      .banner__wrapper
+        .banner__block
+          .banner__info-wrapper
+            h2.banner__title Приложение IPTVPORTAL в&nbsp;подарок для каждого тарифа
+            p.banner__description Для просмотра цифрового телевидения без использования ТВ-приставки воспользуйтесь приложением IPTVPORTAL. Технология IPTV предоставляет возможность смотреть каналы в&nbsp;HD качестве с&nbsp;любого устройства.
+            +btn({href: "#", text: "Получить"}).banner__button
+          .banner__image-wrapper
+            +img("content/banner", "gifts", "webp", 594, 335, "gifts")
+          .banner__image-wrapper.banner__image-wrapper--tablet
+            +img("content/banner", "gifts-tablet", "webp", 273, 442, "gifts")
+          .banner__image-wrapper.banner__image-wrapper--mobile
+            +img("content/banner", "gifts-mobile", "webp", 354, 257, "gifts")
+

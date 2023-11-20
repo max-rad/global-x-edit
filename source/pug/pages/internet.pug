@@ -1,0 +1,106 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Интернет"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "internet.html"
+
+block main
+  main
+    +intro({
+      title: "Безлимитный домашний интернет по&nbsp;выгодным ценам <span>приложение IPTV<br> в&nbsp;подарок</span><br> к&nbsp;любому тарифу",
+      button: "true",
+      image: {
+        src: "intro-internet",
+        format: "webp",
+        width: "546",
+        height: "469",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--internet
+    +available-tariffs({
+      title: "Доступные тарифы",
+      list: [
+        {
+          popular: "true",
+          title: "Стартовый",
+          description: "Развлечение и&nbsp;общение для всей семьи. Общение по&nbsp;видеосвязи, видео-игры, просмотр видео высокого качества на&nbsp;любой платформе",
+          features: [
+            {
+              mod: "true",
+              icon: {
+                name: "icon-global",
+                width: "32",
+                height: "32"
+              },
+              title: "100&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            }
+          ],
+          price: "550"
+        },
+        {
+          title: "Любимый",
+          description: "Пользуйтесь интернетом одновременно с&nbsp;5-ти и&nbsp;более устройств, увеличенная скорость отлично подойдет для загрузки больших данных",
+          features: [
+            {
+              mod: "true",
+              icon: {
+                name: "icon-global",
+                width: "32",
+                height: "32"
+              },
+              title: "300&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            }
+          ],
+          price: "700"
+        },
+        {
+          title: "Игровой",
+          description: "Интернет с&nbsp;максимальной скоростью и&nbsp;передачей данных. Скачивайте и&nbsp;смотрите что угодно ещё быстрее",
+          features: [
+            {
+              mod: "true",
+              icon: {
+                name: "icon-global",
+                width: "32",
+                height: "32"
+              },
+              title: "1000&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            }
+          ],
+          price: "1000"
+        },
+        {
+          title: "Игровой",
+          description: "Интернет с&nbsp;максимальной скоростью и&nbsp;передачей данных. Скачивайте и&nbsp;смотрите что угодно ещё быстрее",
+          features: [
+            {
+              mod: "true",
+              icon: {
+                name: "icon-global",
+                width: "32",
+                height: "32"
+              },
+              title: "1000&nbsp;Мбит/с",
+              description: "Безлимитный интернет"
+            }
+          ],
+          price: "1000"
+        }
+      ]
+    }).available-tariffs--internet
+    +banner()
+    +available-equipment()
+    +about()
+    +steps()
+    +feedback()
+
+
+block modals

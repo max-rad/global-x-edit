@@ -1,0 +1,11 @@
+mixin equipment-card(data)
+  .equipment-card
+    if (data.rent)
+      span.equipment-card__text Аренда
+    .equipment-card__image-wrapper
+      +img("content/equipment", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .equipment-card__info-wrapper
+      h3.equipment-card__title!=data.title
+      .equipment-card__button-wrapper
+        +btn({href: "#", text: "Узнать подробнее"}).equipment-card__button
+        p.equipment-card__price!=data.price

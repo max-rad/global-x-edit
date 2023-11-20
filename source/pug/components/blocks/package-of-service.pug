@@ -1,0 +1,91 @@
+mixin package-of-service()
+  -
+    const list = [
+      {
+        title: "Высокоскоростной интернет",
+        list: [
+          {
+            icon: {
+              name: "icon-global",
+              width: "24",
+              height: "24"
+            },
+            text: "До&nbsp;1000&nbsp;Мбит/с"
+          },
+          {
+            icon: {
+              name: "icon-shuffle",
+              width: "24",
+              height: "24"
+            },
+            text: "Бесплатное подключение"
+          }
+        ]
+      },
+      {
+        title: "Интерактивное телевидение",
+        list: [
+          {
+            icon: {
+              name: "icon-monitor-recorder-2",
+              width: "24",
+              height: "24"
+            },
+            text: "Управление просмотром"
+          },
+          {
+            icon: {
+              name: "icon-cpu-charge",
+              width: "24",
+              height: "24"
+            },
+            text: "15&nbsp;HD каналов высокой четкости"
+          },
+          {
+            icon: {
+              name: "icon-monitor",
+              width: "24",
+              height: "24"
+            },
+            text: "146 уникальных каналов"
+          }
+        ]
+      },
+      {
+        title: "IPTV-PORTAL (Приложение)",
+        list: [
+          {
+            icon: {
+              name: "icon-monitor-mobile",
+              width: "24",
+              height: "24"
+            },
+            text: "Поддержка популярных устройств"
+          },
+          {
+            icon: {
+              name: "icon-monitor-recorder",
+              width: "24",
+              height: "24"
+            },
+            text: "30&nbsp;каналов камер наблюдения"
+          }
+        ]
+      }
+    ]
+
+  .package-of-service
+    h3.package-of-service__title Специальный пакет услуг с&nbsp;интернетом
+    p.package-of-service__description Пользуйтесь быстрым интернетом, смотрите цифровое телевидение через ТВ-приставку с&nbsp;современной технологией телевещания с&nbsp;обеспечением высокой четкости Full&nbsp;HD, скачивайте приложение для просмотра на&nbsp;любых устройствах
+    ul.list-reset.package-of-service__list
+      each item in list
+        li.package-of-service__item
+          .package-of-service__info
+            +icon("icon-check-mark", 22, 20).package-of-service__icon
+            p.package-of-service__label!=item.title
+          ul.list-reset.package-of-service__sublist
+            each subitem in item.list
+              li.package-of-service__subitem
+                +icon(subitem.icon.name, subitem.icon.width, subitem.icon.height)
+                p.package-of-service__text!=subitem.text
+    +btn({href: "#", text: "Узнать подробнее"}).package-of-service__button

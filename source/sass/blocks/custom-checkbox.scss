@@ -1,7 +1,9 @@
 .custom-checkbox {
+  position: relative;
+
   label {
-    position: relative;
     display: inline-flex;
+    align-items: center;
 
     cursor: pointer;
   }
@@ -10,22 +12,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-right: 8px;
 
-    border: 1px solid $color-gainsboro;
+    border: 1px solid $color-red-orange;
     border-radius: 2px;
     background-color: $color-default-white;
 
-    transition: border $trans-default, background-color $trans-default;
+    transition: background-color $trans-default;
 
     svg {
       flex-shrink: 0;
 
-      width: 20px;
-      height: 20px;
+      width: 14px;
+      height: 14px;
 
       transition: visibility $trans-default, opacity $trans-default;
 
@@ -45,8 +48,7 @@
   }
 
   input:checked + .custom-checkbox__icon {
-    border: 1px solid $color-nero;
-    background-color: $color-nero;
+    background-color: $color-red-orange;
 
     svg {
       visibility: visible;
@@ -54,16 +56,49 @@
     }
   }
 
-  &__label {
-    display: inline-flex;
-    align-items: center;
+  input:checked ~ .custom-checkbox__text {
+    opacity: 1;
+    visibility: visible;
+  }
 
-    min-height: 20px;
+  &__label {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: $color-nero-2;
+
+    user-select: none;
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 33px;
+    }
+
+    @include vp-479 {
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    margin: 4px 0 0;
+    padding-left: 28px;
 
     font-weight: 400;
-    font-size: 13px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 19px;
 
-    color: $color-nero;
+    color: rgba($color-default-black, 0.5);
+
+    transition: opacity $trans-default, visibility $trans-default;
+
+    opacity: 0;
+    visibility: hidden;
   }
 }

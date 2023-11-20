@@ -1,0 +1,61 @@
+mixin advantages()
+  -
+    const list = [
+      {
+        image: {
+          src: "coins",
+          format: "webp",
+          width: "80",
+          height: "80",
+          alt: "coins"
+        },
+        title: "Самые выгодные цены",
+        description: "Лучшее сочетание стоимости и&nbsp;качества цифровой связи в&nbsp;Ноябрьске. Скидки при единовременной оплате за&nbsp;несколько месяцев"
+      },
+      {
+        image: {
+          src: "computer",
+          format: "webp",
+          width: "80",
+          height: "80",
+          alt: "computer"
+        },
+        title: "Интернет, который не&nbsp;подведет",
+        description: "Важный видеозвонок не&nbsp;прервётся, фильм и&nbsp;сериал не&nbsp;зависнут на&nbsp;самом интересном, тяжёлые файлы скачаются быстро"
+      },
+      {
+        image: {
+          src: "settings",
+          format: "webp",
+          width: "80",
+          height: "80",
+          alt: "settings"
+        },
+        title: "Подключение без вреда ремонту",
+        description: "Инженер проведет кабель для домашнего интернета, цифровое телевидение без повреждения интерьера вашей квартиры"
+      },
+      {
+        image: {
+          src: "messages",
+          format: "webp",
+          width: "80",
+          height: "80",
+          alt: "messages"
+        },
+        title: "Отличный<br> сервис",
+        description: "Наш сотрудник в&nbsp;удобное вам время привезет договор, подключит интернет и&nbsp;настроит оборудование"
+      }
+    ]
+
+  section.advantages
+    .container
+      .advantages__wrapper
+        h2.title.title--t1 Что получает любой клиент Сервер-Связи
+        ul.list-reset.advantages__list
+          each item in list
+            li.advantages__item
+              .advantages__image-wrapper
+                +img("content/advantages", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+              .advantages__info
+                h3.advantages__title!=item.title
+                p.advantages__description!=item.description

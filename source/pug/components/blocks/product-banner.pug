@@ -1,0 +1,14 @@
+mixin product-banner()
+  section.product-banner
+    .product-banner__background
+      +img("content/product-banner", "background", "webp", 1920, 600, "background")
+    .container
+      .product-banner__wrapper
+        .product-banner__info-wrapper
+          h2.product-banner__title Умный медиацентр TVIP S-Box превращает обычный телевизор в&nbsp;Smart&nbsp;TV
+          ul.product-banner__list
+            li.product-banner__item Управление просмотром
+            li.product-banner__item Качество изображение 4K&nbsp;Ultra HD
+            li.product-banner__item Простая настройка системы
+        .product-banner__image-wrapper
+          +img("content/product-banner", "media-center-tvip-s-box", "webp", 570, 300, "image")

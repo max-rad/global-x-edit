@@ -1,0 +1,47 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | TV"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "television.html"
+
+block main
+  main
+    +intro({
+      title: "Современное домашнее телевидение по&nbsp;выгодным ценам в&nbsp;Ноябрьске",
+      button: "true",
+      image: {
+        src: "intro-tv",
+        format: "webp",
+        width: "1322",
+        height: "460",
+        alt: "intro"
+      },
+      imageTablet: {
+        src: "intro-tv-tablet",
+        format: "webp",
+        width: "768",
+        height: "406",
+        alt: "intro"
+      },
+      imageMobile: {
+        src: "intro-tv-mobile",
+        format: "webp",
+        width: "480",
+        height: "504",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--television
+    +available-tariffs({
+      title: "Доступные тарифы"
+    })
+    +available-equipment()
+    +steps()
+    +channel-list()
+
+
+block modals

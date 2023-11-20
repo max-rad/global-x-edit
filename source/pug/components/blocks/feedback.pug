@@ -21,7 +21,6 @@ mixin feedback()
                 name: "question"
               }).feedback__textarea
               +btn({type: "button", text: "Отправить"}).feedback__button
-              p.feedback__agreement Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
-                a(href="#") политикой обработки персональных данных
+              +agreement()
           .feedback__background
             +img("content/feedback", "feedback-background", "webp", 683, 525, "background")

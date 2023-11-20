@@ -1,0 +1,27 @@
+mixin tariff-card(data, mod)
+  .tariff-card(class=mod)&attributes(attributes)
+    form(method="get")
+      .tariff-card__wrapper
+        if (data.popular)
+          +icon("icon-stock", 30, 61).tariff-card__icon
+        h3.tariff-card__title!=data.title
+        p.tariff-card__description!=data.description
+        ul.list-reset.tariff-card__list
+          each item in data.features
+            li.tariff-card__item(class={"tariff-card__item--big" : item.mod})
+              +icon(item.icon.name, item.icon.width, item.icon.height)
+              .tariff-card__info
+                p.tariff-card__label!=item.title
+                if (item.description)
+                  p.tariff-card__text!=item.description
+        +custom-checkbox({
+          label: "Статический IP-Адрес",
+          name: "static-ip",
+          checked: "true",
+          text: "Стоимость подключения 350 рублей"
+        }).tariff-card__checkbox
+        .tariff-card__button-wrapper
+          +price({price: data.price})
+          +btn({type: "submit", text: "Подключить"}).tariff-card__button
+        if (data.text)
+          p.tariff-card__postscript!=data.text

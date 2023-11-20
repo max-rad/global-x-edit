@@ -1,0 +1,31 @@
+mixin tariff-constructor-total()
+  .tariff-constructor-total
+    .tariff-constructor-total__info
+      h3.tariff-constructor-total__title Ваша заявка
+      p.tariff-constructor-total__description После отправки формы с&nbsp;вами свяжется наш менеджер и&nbsp;согласует время и&nbsp;место подключения
+      dl.tariff-constructor-total__list
+        .tariff-constructor-total__item
+          dt.tariff-constructor-total__term Интернет 100&nbsp;Мбит/с
+          dd.tariff-constructor-total__price 150 руб
+        .tariff-constructor-total__item
+          dt.tariff-constructor-total__term Пакет цифрового TV
+          dd.tariff-constructor-total__price 800 руб
+        .tariff-constructor-total__item
+          dt.tariff-constructor-total__term Статический IP-адрес
+          dd.tariff-constructor-total__price 100 руб
+    h3.tariff-constructor-total__title Введите контактные данные
+    .tariff-constructor-total__form
+      .tariff-constructor-total__form-wrapper
+        +custom-input({
+          label: "Ваше имя:",
+          type: "text",
+          name: "name"
+        }).custom-input--underline.tariff-constructor-total__input
+        +custom-input({
+          label: "Ваш телефон:",
+          type: "tel",
+          name: "phone"
+        }).custom-input--underline.tariff-constructor-total__input
+      +price({label: "Итого:", price: "550"})
+      +btn({type: "submit", text: "Подключить"}).tariff-constructor-total__button
+      +agreement()

@@ -2,7 +2,8 @@ mixin articles(data)
   section.articles
     .container
       .articles__wrapper
-        h1.title.title--h1!=data.title
-        ul.articles__list
+        h1.title.title--t1!=data.title
+        ul.list-reset.articles__list
           each item in data.list
             li.articles__item
+              +article-card(item)

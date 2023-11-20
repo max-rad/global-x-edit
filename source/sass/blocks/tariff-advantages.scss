@@ -1,0 +1,59 @@
+.tariff-advantages {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-1023 {
+      padding: 0 0 64px;
+    }
+
+    @include vp-767 {
+      padding: 0 0 60px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @include vp-1279 {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+      row-gap: unset;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+
+    background-color: $color-white-smoke;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+
+    &:last-child {
+      @include vp-767 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: $color-default-black;
+  }
+}

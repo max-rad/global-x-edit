@@ -1,0 +1,165 @@
+.banner {
+  &__wrapper {
+    padding: 0 0 64px;
+
+    @include vp-767 {
+      padding: 0 0 60px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    background-color: $color-white-smoke;
+    box-shadow: 0 4px 14px 0 rgba($color-default-black, 0.12);
+
+    @include vp-1023 {
+      padding: 0 0 0 30px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 40px 30px;
+    }
+
+    @include vp-479 {
+      padding: 20px;
+    }
+  }
+
+  &__info-wrapper {
+    padding: 40px 0;
+    margin-right: 52px;
+
+    @include vp-1023 {
+      margin-right: 16px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+
+    font-weight: 600;
+    font-weight: 28px;
+    line-height: 42px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      margin: 0 0 20px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__description {
+    max-width: 667px;
+    margin: 0 0 40px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: rgba($color-default-black, 0.5);
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 216px;
+
+    @include vp-1023 {
+      max-width: 300px;
+    }
+
+    @include vp-767 {
+      max-width: 260px;
+    }
+  }
+
+  &__image-wrapper {
+    width: 594px;
+    height: 335px;
+
+    @include vp-1023 {
+      flex-shrink: 0;
+
+      display: none;
+
+      width: 273px;
+      height: 442px;
+    }
+
+    @include vp-767 {
+      flex-shrink: unset;
+
+      width: 354px;
+      height: 257px;
+    }
+
+    @include vp-479 {
+      width: 100%;
+    }
+
+    img {
+      width: 594px;
+      height: 335px;
+
+      object-fit: contain;
+
+      @include vp-1023 {
+        width: 273px;
+        height: 442px;
+      }
+
+      @include vp-767 {
+        width: 354px;
+        height: 257px;
+      }
+
+      @include vp-479 {
+        width: 100%;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @include vp-1023 {
+        display: block;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+}

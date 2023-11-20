@@ -7,6 +7,8 @@ mixin custom-checkbox(options = {})
     label
       input(type="checkbox" name=inputName checked=inputChecked)
       span.custom-checkbox__icon
-        +icon("icon-check", 20, 20)
+        +icon("icon-check", 14, 14)
       if (inputLabel)
         span.custom-checkbox__label!=inputLabel
+      if (options.text)
+        span.custom-checkbox__text!=options.text

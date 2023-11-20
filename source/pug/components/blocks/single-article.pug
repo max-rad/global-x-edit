@@ -1,0 +1,37 @@
+mixin single-article(data)
+  section.single-article
+    .container
+      .single-article__wrapper
+        if (data.date)
+          span.single-article__date!=data.date
+        h1.single-article__title(class={"single-article__title--small" : currentUrl === "single-article.html"})!=data.title
+        if (data.description)
+          p.single-article__description!=data.description
+        .single-article__content
+          if (currentUrl === "vacancy.html")
+            h2!=data.content.title1
+            ul
+              each item in data.content.list1
+                li!=item
+            p!=data.content.text1
+            p!=data.content.text2
+            p!=data.content.text3
+            p!=data.content.text4
+            p!=data.content.text5
+            h2!=data.content.title2
+            ul
+              each item in data.content.list2
+                li!=item
+            h2!=data.content.title3
+            ul
+              each item in data.content.list3
+                li!=item
+          if (currentUrl === "vacancy.html")
+            p.single-article__phone Телефон отдела кадров: 45-80-09
+            p.single-article__email Резюме направлять на&nbsp;email: rabota@global-x.ru
+          else
+            p!=data.content.text1
+            p!=data.content.text2
+            ul
+              each item in data.content.list
+                li!=item

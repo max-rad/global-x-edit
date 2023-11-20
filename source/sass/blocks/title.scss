@@ -2,15 +2,49 @@
   margin: 0;
 
   &--h1 {
+    margin: 0 0 10px;
+
     font-weight: 600;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 72px;
+    line-height: 108px;
 
     color: $color-nero;
 
     @include vp-1023 {
-      font-size: 32px;
-      line-height: 48px;
+      font-size: 65px;
+      line-height: 98px;
+    }
+
+    @include vp-479 {
+      margin: 0 0 40px;
+
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  &--h2 {
+    margin: 0 0 40px;
+
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 65px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include vp-767 {
+      font-size: 38px;
+      line-height: 49px;
+    }
+
+    @include vp-479 {
+      font-size: 34px;
+      line-height: 45px;
     }
   }
 
@@ -25,6 +59,55 @@
 
     @include vp-767 {
       margin: 0 0 32px;
+    }
+  }
+
+  &--t1 {
+    margin: 0 0 40px;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 32px;
+    }
+
+    @include vp-479 {
+      font-size: 25px;
+      line-height: 33px;
+    }
+  }
+
+  &--t2 {
+    margin: 0 0 24px;
+
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: $color-default-black;
+
+    @include vp-1023 {
+      margin: 0 0 40px;
+
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 32px;
+
+      font-size: 32px;
+      line-height: 48px;
     }
   }
 }

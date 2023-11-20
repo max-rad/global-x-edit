@@ -1,0 +1,32 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Видеонаблюдение"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "video-surveillance.html"
+
+block main
+  main
+    +intro({
+      title: "Системы видеонаблюдения по&nbsp;отличной цене в&nbsp;Ноябрьске",
+      button: "true",
+      image: {
+        src: "intro-video-surveillance",
+        format: "webp",
+        width: "920",
+        height: "512",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--video-surveillance
+    +available-service()
+    +available-equipment()
+    +order-form()
+    +camera-records()
+    +feedback()
+
+
+block modals

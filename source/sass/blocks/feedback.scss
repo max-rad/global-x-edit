@@ -71,34 +71,10 @@
     }
   }
 
-  &__agreement {
-    margin: 0;
-
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-
-    color: $color-nero;
-
-    transition: opacity $trans-default;
-
-    @include vp-767 {
-      line-height: 20px;
-    }
-
-    a {
-      text-decoration: underline;
-    }
-
-    @include hover-focus {
-      opacity: 0.8;
-    }
-  }
-
   &__background {
     width: 100%;
     max-width: 683px;
-    height: 525px;
+    min-height: 100%;
 
     border-radius: 10px;
 
@@ -114,7 +90,7 @@
     img {
       width: 100%;
       max-width: 683px;
-      height: 525px;
+      min-height: 100%;
 
       border-radius: 10px;
 

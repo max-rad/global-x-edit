@@ -1,0 +1,43 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Магазин "
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "store.html"
+
+block main
+  main
+    +intro({
+      title: "Необходимое оборудование для оказания услуг связи",
+      button: "true",
+      image: {
+        src: "intro-store",
+        format: "webp",
+        width: "559",
+        height: "400",
+        alt: "intro"
+      },
+      imageTablet: {
+        src: "intro-store-tablet",
+        format: "webp",
+        width: "356",
+        height: "248",
+        alt: "intro"
+      },
+      imageMobile: {
+        src: "intro-store-tablet",
+        format: "webp",
+        width: "151",
+        height: "245",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--store
+    +equipment()
+    +feedback()
+
+
+block modals

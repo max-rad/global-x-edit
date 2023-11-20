@@ -1,0 +1,17 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | 404"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "404.html"
+
+block main
+  main
+    +page-not-found()
+
+
+block modals

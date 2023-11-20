@@ -1,0 +1,13 @@
+mixin page-not-found()
+  section.page-not-found
+    .container
+      .page-not-found__wrapper
+        h1.page-not-found__title(aria-label="404")
+          | 4
+          span.page-not-found__image-wrapper
+            +img("content/404", "404", "webp", 169, 227, "404")
+          | 4
+        .page-not-fount__info
+          h2.page-not-found__subtitle Страница не&nbsp;найдена
+          p.page-not-found__description Возможно вы&nbsp;ввели неправильный адрес или страница была удалена
+          +btn({href: "#", text: "Перейти на главную"}).page-not-found__button

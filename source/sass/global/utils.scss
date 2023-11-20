@@ -47,6 +47,20 @@
   list-style: none;
 }
 
+.desktop {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include vp-767 {
+    display: inline;
+  }
+}
+
 .scroll-lock-ios {
   position: fixed;
 

@@ -1,0 +1,14 @@
+mixin features(data)
+  section.features
+    .container
+      .features__wrapper
+        h2.title.title--t1!=data.title
+        ul.list-reset.features__list
+          each item in data.list
+            li.features__item
+              .features__icon
+                if (item.icon)
+                  +icon(item.icon.name, item.icon.width, item.icon.height)
+                if (item.text)
+                  span.features__text!=item.text
+              p.features__description!=item.description

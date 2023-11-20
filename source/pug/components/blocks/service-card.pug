@@ -13,10 +13,7 @@ mixin service-card(data)
         .service-card__button-wrapper
           +btn({href: data.button.href, text: data.button.text}).service-card__button
           if (data.price)
-            p.service-card__price!=data.price
-              span.service-card__units
-                span.service-card__unit руб
-                span.service-card__unit мес
+            +price({price: data.price})
       .service-card__image-wrapper(class=(data.image.mod ? `service-card__image-wrapper--${data.image.mod}` : false))
         +img("content/service", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
         if (data.backgroundImage)

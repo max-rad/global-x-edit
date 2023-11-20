@@ -1,0 +1,26 @@
+mixin order-form()
+  section.order-form
+    .container
+      .order-form__wrapper
+        .order-form__content
+          .order-form__info-wrapper
+            h2.order-form__title.title.title--t1 Закажите подключение видеонаблюдения по&nbsp;отличным ценам
+            p.order-form__description После отправки формы с&nbsp;вами свяжется наш менеджер и&nbsp;согласует время и&nbsp;место подключения
+            .order-form__form
+              form(method="post")
+                p.order-form__label Введите контактные данные
+                .order-form__form-wrapper
+                  +custom-input({
+                    label: "Ваше имя:",
+                    type: "text",
+                    name: "name"
+                  }).custom-input--underline.order-form__input
+                  +custom-input({
+                    label: "Ваш телефон:",
+                    type: "tel",
+                    name: "phone"
+                  }).custom-input--underline.order-form__input
+                +btn({type: "submit", text: "Отправить"}).order-form__button
+                +agreement()
+          .order-form__image-wrapper
+            +img("content", "camera", "webp", 380, 300, "camera")

@@ -21,12 +21,6 @@
 
   outline: none;
 
-  &--white {
-    border: 1px solid $color-dolphin;
-    background-color: $color-default-white;
-    color: $color-black-russian-2;
-  }
-
   @include hover-focus {
     background-color: $color-flamingo;
     color: rgba($color-default-white, 0.9)
@@ -40,5 +34,13 @@
   &.disabled {
     background-color: $color-silver;
     color: rgba($color-default-white, 0.9)
+  }
+
+  &__icon {
+    flex-shrink: 0;
+
+    width: 21px;
+    height: 13px;
+    margin-left: 10px;
   }
 }

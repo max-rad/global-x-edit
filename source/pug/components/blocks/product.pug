@@ -1,0 +1,43 @@
+mixin product()
+  -
+    const list = [
+      {
+        term: "Тип устройства:",
+        description: "ТВ-приставка"
+      },
+      {
+        term: "Максимальное разрешение:",
+        description: "FullHD"
+      },
+      {
+        term: "Операционная система:",
+        description: "Linux"
+      }
+    ]
+
+  section.product
+    .container
+      .product__wrapper
+        h1.title.title--t1 Медиацентр TVIP S-Box IPTV/OTT v.530
+        .product__content
+          .product__slider.swiper(data-slider="product")
+            .product__slides.swiper-wrapper
+              .product__slide.swiper-slide
+                .product__image-wrapper
+                  +img("content/products", "media-center-tvip-s-box", "webp", 600, 400, "product")
+            .swiper-button-prev
+            .swiper-button-next
+          .product__info
+            h2.product__label Основные характеристики:
+            dl.product__list
+              each item in list
+                .product__item
+                  dt.product__term!=item.term
+                  dd.product__description!=item.description
+            p.product__rent Аренда: от 50 руб/мес
+            p.product__price Цена:
+              =" "
+              span 3&nbsp;600 руб
+  +product-banner()
+  +product-description()
+  +product-features()

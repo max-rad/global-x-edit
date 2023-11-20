@@ -1,0 +1,92 @@
+mixin tariff-constructor()
+  section.tariff-constructor
+    .container
+      .tariff-constructor__wrapper
+        h2.title.title--t1 Выберите тарифные опции
+        .tariff-constructor__form
+          form(method="get")
+            .tariff-constructor__form-wrapper
+              .tariff-constructor__options
+                .tariff-constructor__block
+                  +custom-checkbox({
+                    label: "Безлимитный интернет",
+                    name: "unlimited-internet",
+                    checked: "true"
+                  }).tariff-constructor__checkbox
+                  p.tariff-constructor__description Интернет по&nbsp;технологии FTTB (&laquo;оптический кабель до&nbsp;дома&raquo;) с&nbsp;высокой скоростью соединения. Подключение напрямую к&nbsp;Интернету
+                  p.tariff-constructor__label Выберите скорость
+                  .tariff-constructor__radio-buttons
+                    +custom-radio({
+                      label: "100 мбит/c",
+                      name: "speed",
+                      value: "100Mbps",
+                      checked: "true"
+                    }).tariff-constructor__radio
+                    +custom-radio({
+                      label: "300 мбит/c",
+                      name: "speed",
+                      value: "300Mbps"
+                    }).tariff-constructor__radio
+                    +custom-radio({
+                      label: "1000 мбит/c",
+                      name: "speed",
+                      value: "1000Mbps"
+                    }).tariff-constructor__radio
+                    +custom-radio({
+                      label: "не знаю",
+                      name: "speed",
+                      value: "dont-know"
+                    }).tariff-constructor__radio
+                .tariff-constructor__accordion(data-accordion="parent" data-destroy="(max-width: 1023px)")
+                  .tariff-constructor__element(data-accordion="element")
+                    .tariff-constructor__button-wrapper
+                      +custom-checkbox({
+                        label: "Пакет цифрового <span class='desktop'>телевидения</span> <span class='tablet'>TV</span>",
+                        name: "digital-tv",
+                        checked: "true"
+                      }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
+                      button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
+                        +icon("icon-chevron-right", 40, 40)
+                    .tariff-constructor__content(data-accordion="content")
+                      .tariff-constructor__content-wrapper
+                        p.tariff-constructor__description Наслаждайтесь современной технологией телевещания с&nbsp;обеспечением высокого качества изображения и&nbsp;звука
+                        dl.tariff-constructor__list
+                          .tariff-constructor__item
+                            dt.tariff-constructor__term
+                              +icon("icon-check-mark", 21, 15)
+                              | Цифровое телевидение
+                            dd.tariff-constructor__definition Подключение через&nbsp;ТВ кабель, без дополнительного оборудования. Количество подключаемых телевизоров не&nbsp;ограничено.
+                          .tariff-constructor__item
+                            dt.tariff-constructor__term
+                              +icon("icon-check-mark", 21, 15)
+                              | Интерактивное телевидение
+                            dd.tariff-constructor__definition Цифровое ТВ&nbsp;через IPTV приставку. Мультирум, качество звука 5.1, изображение высокой четкости Full&nbsp;HD.
+                          .tariff-constructor__item
+                            dt.tariff-constructor__term
+                              +icon("icon-check-mark", 21, 15)
+                              | IPTV-PORTAL (Приложение)
+                            dd.tariff-constructor__definition Приложение для просмотра цифрового&nbsp;ТВ на&nbsp;любом устройстве. Не&nbsp;требуется установка дополнительного оборудования. Подключение до&nbsp;5&nbsp;устройств.
+                  .tariff-constructor__element(data-accordion="element")
+                    .tariff-constructor__button-wrapper
+                      +custom-checkbox({
+                        label: "Статический IP-адрес",
+                        name: "static-ip",
+                        checked: "true"
+                      }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
+                      button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
+                        +icon("icon-chevron-right", 40, 40)
+                    .tariff-constructor__content(data-accordion="content")
+                      .tariff-constructor__content-wrapper
+                        p.tariff-constructor__description Постоянный адрес в&nbsp;сети интернет, к&nbsp;которому&nbsp;Вы можете обращаться постоянно, как внутри сети, так и&nbsp;снаружи. Возможность организовать размещение в&nbsp;сети собственные веб-ресурсы.
+                  .tariff-constructor__element(data-accordion="element")
+                    .tariff-constructor__button-wrapper
+                      +custom-checkbox({
+                        label: "Видеонаблюдение",
+                        name: "video",
+                      }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
+                      button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
+                        +icon("icon-chevron-right", 40, 40)
+                    .tariff-constructor__content(data-accordion="content")
+                      .tariff-constructor__content-wrapper
+                        p.tariff-constructor__description +350 руб./мес. архив 5&nbsp;дней. Наблюдайте за&nbsp;вашей недвижимостью в&nbsp;прямом эфире или в&nbsp;записи из&nbsp;любой точки мира, где есть интернет
+              +tariff-constructor-total()

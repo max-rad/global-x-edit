@@ -1,0 +1,155 @@
+.product-banner {
+  position: relative;
+
+  &__background {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    padding: 162px 0 108px;
+
+    @include vp-1023 {
+      align-items: center;
+      padding: 64px 0;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      padding: 60px 0;
+    }
+  }
+
+  &__info-wrapper {
+    width: 100%;
+    max-width: 523px;
+    margin: 0 80px 54px 0;
+    padding: 20px;
+
+    border-radius: 10px;
+    background: linear-gradient(180deg, $color-white-smoke 59.72%, rgba($color-white-smoke, 0) 136.64%);
+
+    @include vp-1023 {
+      max-width: 334px;
+      margin: 0 16px 0;
+      padding: 40px 30px;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+      margin: 0 0 40px;
+    }
+
+    @include vp-479 {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+
+    @include vp-1023 {
+      margin: 0 0 30px;
+
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 42px;
+    }
+
+    @include vp-479 {
+      font-size: 21px;
+      line-height: 35px;
+    }
+  }
+
+  &__list {
+    padding-left: 25px;
+  }
+
+  &__item {
+    margin-bottom: 14px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      margin-bottom: 12px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image-wrapper {
+    width: 570px;
+    height: 300px;
+
+    @include vp-1023 {
+      width: 342px;
+      height: 171px;
+    }
+
+    @include vp-767 {
+      width: 392px;
+      height: 196px;
+    }
+
+    @include vp-479 {
+      width: 100%;
+      max-width: 392px;
+    }
+
+    img {
+      width: 570px;
+      height: 300px;
+
+      object-fit: contain;
+
+      @include vp-1023 {
+        width: 342px;
+        height: 171px;
+      }
+
+      @include vp-767 {
+        width: 392px;
+        height: 196px;
+      }
+
+      @include vp-479 {
+        width: 100%;
+        max-width: 392px;
+      }
+    }
+  }
+}

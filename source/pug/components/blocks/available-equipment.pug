@@ -1,0 +1,48 @@
+mixin available-equipment()
+  -
+    const list = [
+      {
+        rent: "true",
+        image: {
+          src: "image-1",
+          format: "webp",
+          width: "440",
+          height: "250",
+          alt: "image"
+        },
+        title: "Медиацентр TVIP S-Box IPTV/OTT v.530",
+        price: "3&nbsp;600 руб"
+      },
+      {
+        rent: "true",
+        image: {
+          src: "image-2",
+          format: "webp",
+          width: "440",
+          height: "250",
+          alt: "image"
+        },
+        title: "Абонентский терминал &laquo;Eltex&raquo; NTU-1",
+        price: "5&nbsp;360 руб"
+      },
+      {
+        image: {
+          src: "image-3",
+          format: "webp",
+          width: "440",
+          height: "250",
+          alt: "image"
+        },
+        title: "Маршрутизатор TP-Link Archer C80",
+        price: "4&nbsp;990 руб"
+      }
+    ]
+
+  section.available-equipment
+    .container
+      .available-equipment__wrapper
+        h2.title.title--t1 Доступное оборудование
+        ul.list-reset.available-equipment__list
+          each item in list
+            li.available-equipment__item
+              +equipment-card(item)
