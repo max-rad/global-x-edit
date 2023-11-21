@@ -1,0 +1,50 @@
+mixin monitoring()
+  -
+    const list = [
+      {
+        image: {
+          src: "monitor",
+          format: "webp",
+          width: "390",
+          height: "230",
+          alt: "monitor"
+        },
+        title: "Монитор компьютера",
+        description: "Просматривайте подключенные камеры через интернет!"
+      },
+      {
+        image: {
+          src: "tv",
+          format: "webp",
+          width: "390",
+          height: "230",
+          alt: "tv"
+        },
+        title: "Экран телевизора",
+        description: "Просматривайте Ваши видеокамеры сидя перед телевизором. Все что нужно&nbsp;&mdash; IPTV приставка."
+      },
+      {
+        image: {
+          src: "mobile",
+          format: "webp",
+          width: "390",
+          height: "230",
+          alt: "mobile"
+        },
+        title: "Мобильное устройство",
+        description: "Смотрите прямую трансляцию с&nbsp;видеокамеры без ограничений по&nbsp;качеству"
+      }
+    ]
+
+  section.monitoring
+    .container
+      .monitoring__wrapper
+        h2.title.title--t1 Наблюдайте за&nbsp;происходящем на&nbsp;любом устройстве
+        ul.list-reset.monitoring__list
+          each item in list
+            li.monitoring__item
+              a.monitoring__link(href="#")
+                .monitoring__image-wrapper
+                  +img("content/monitoring", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                h3.monitoring__title!=item.title
+                p.monitoring__description!=item.description

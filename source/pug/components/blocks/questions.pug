@@ -1,0 +1,14 @@
+mixin questions(data)
+  section.questions
+    .container
+      .questions__wrapper
+        h2.title.title--t1 Часто задаваемые вопросы
+        .questions__accordion(data-accordion="parent")
+          each element in data
+            .questions__element(data-accordion="element")
+              button.btn-reset.questions__button(type="button" data-accordion="button")!=element.title
+                span.questions__icon
+              .questions__content(data-accordion="content")
+                .questions__content-wrapper
+                  each item in element.content
+                    p!=item

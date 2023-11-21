@@ -635,7 +635,7 @@
   &--video-surveillance,
   &--video-surveillance-city,
   &--video-surveillance-yard,
-  &--personal {
+  &--video-surveillance-personal {
     background-color: $color-white-smoke;
 
     .intro__image-wrapper {
@@ -729,7 +729,7 @@
   }
 
   &--video-surveillance-city {
-    min-height: 465px;
+    min-height: 460px;
 
     @include vp-1023 {
       min-height: 406px;
@@ -876,7 +876,7 @@
     }
   }
 
-  &--personal {
+  &--video-surveillance-personal {
     min-height: 465px;
 
     @include vp-1023 {
@@ -922,14 +922,14 @@
       }
 
       &::after {
-        background: linear-gradient(270deg, $color-white-smoke 2%, rgba($color-white-smoke, 0.57) 27.15%, rgba($color-white-smoke, 0) 41.04%, rgba($color-white-smoke, 0.00) 54.41%, rgba($color-white-smoke, 0.00) 69.53%);
+        background: linear-gradient(90deg, $color-white-smoke 2%, rgba($color-white-smoke, 0.57) 27.15%, rgba($color-white-smoke, 0) 41.04%, rgba($color-white-smoke, 0.00) 54.41%, rgba($color-white-smoke, 0.00) 69.53%);
 
         @include vp-1023 {
-          background: linear-gradient(270deg, $color-white-smoke 32.68%, rgba($color-white-smoke, 0.91) 45.26%, rgba($color-white-smoke, 0) 66.28%);
+          background: linear-gradient(90deg, $color-white-smoke 32.68%, rgba($color-white-smoke, 0.91) 45.26%, rgba($color-white-smoke, 0) 66.28%);
         }
 
         @include vp-767 {
-          background: linear-gradient(270deg, $color-white-smoke 51.1%, rgba($color-white-smoke, 0.57) 63.51%, rgba($color-white-smoke, 0.00) 69.21%, rgba($color-white-smoke, 0.00) 76.43%, rgba($color-white-smoke, 0) 84.6%);
+          background: linear-gradient(90deg, $color-white-smoke 51.1%, rgba($color-white-smoke, 0.57) 63.51%, rgba($color-white-smoke, 0.00) 69.21%, rgba($color-white-smoke, 0.00) 76.43%, rgba($color-white-smoke, 0) 84.6%);
         }
       }
 

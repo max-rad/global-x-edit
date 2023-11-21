@@ -1,0 +1,26 @@
+.map {
+  &__wrapper {
+    padding: 64px 0;
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__map-wrapper {
+    width: 100%;
+    height: 615px;
+
+    @include vp-1023 {
+      height: 532px;
+    }
+
+    @include vp-767 {
+      height: 437px;
+    }
+  }
+
+  &__map {
+
+  }
+}

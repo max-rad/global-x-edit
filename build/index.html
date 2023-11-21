@@ -37,7 +37,7 @@
                       </svg></a>
                   </div>
                 </div>
-                <ul class="list-reset main-nav__list">
+                <ul class="list-reset main-nav__list" data-accordion="parent" data-destroy="(max-width: 1279px)">
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Интернет
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
@@ -48,14 +48,14 @@
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
                   </li>
-                  <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">Выгодно
+                  <li class="main-nav__item main-nav__item--dropdown" data-accordion="element"><a class="main-nav__link" href="#" data-accordion="button">Выгодно
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
-                    <div class="main-nav__dropdown">
+                    <div class="main-nav__dropdown" data-accordion="content">
                       <ul class="list-reset main-nav__dropdown-list">
-                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Интернет+TV</a></li>
-                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Конструктор тарифа</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Интернет+TV</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Конструктор тарифа</a></li>
                       </ul>
                     </div>
                   </li>
@@ -69,14 +69,14 @@
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
                   </li>
-                  <li class="main-nav__item main-nav__item--dropdown"><a class="main-nav__link" href="#">Информация
+                  <li class="main-nav__item main-nav__item--dropdown" data-accordion="element"><a class="main-nav__link" href="#" data-accordion="button">Информация
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
-                    <div class="main-nav__dropdown">
+                    <div class="main-nav__dropdown" data-accordion="content">
                       <ul class="list-reset main-nav__dropdown-list">
-                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Новости</a></li>
-                        <li class="main-nav__dropdown-item"><a class="main-nav__link" href="#">Вакансии</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Новости</a></li>
+                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Вакансии</a></li>
                       </ul>
                     </div>
                   </li>
@@ -225,7 +225,7 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Подключить
+                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
                           </a>
                           <div class="price">
                             <p class="price__price">от&nbsp;550<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
@@ -260,7 +260,7 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Подключить
+                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
                           </a>
                           <div class="price">
                             <p class="price__price">от&nbsp;200<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
@@ -304,7 +304,7 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Подключить
+                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
                           </a>
                           <div class="price">
                             <p class="price__price">от&nbsp;650<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
@@ -341,7 +341,7 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Подключить
+                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
                           </a>
                           <div class="price">
                             <p class="price__price">от&nbsp;350<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
@@ -514,6 +514,46 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--request" data-modal="request">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Оставьте заявку на&nbsp;подключение</h2>
+          <p class="modal__description">После отправки формы с&nbsp;вами свяжется наш менеджер и&nbsp;согласует время и&nbsp;место подключения</p>
+          <div class="request">
+            <div class="request__form">
+              <form method="post">
+                <p class="request__label">Введите ваши контактные данные</p>
+                <div class="request__form-wrapper">
+                  <div class="custom-input custom-input--underline request__input">
+                    <label><span class="custom-input__label">Ваше имя:</span>
+                      <input type="text" name="name">
+                    </label>
+                  </div>
+                  <div class="custom-input custom-input--underline request__input">
+                    <label><span class="custom-input__label">Ваш телефон:</span>
+                      <input type="tel" name="phone">
+                    </label>
+                  </div>
+                  <input type="hidden" name="service-title">
+                  <input type="hidden" name="service-price">
+                </div>
+                <button class="btn request__button" type="submit">Отправить
+                </button>
+                <div class="agreement">
+                  <p class="agreement__text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button class="btn-reset modal__close-button" type="button" arial-label="Закрыть попап" data-close-modal>
+            <svg width="21" height="21" aria-hidden="true">
+              <use xlink:href="/img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

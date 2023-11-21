@@ -51,7 +51,7 @@ textarea {
 input:-webkit-autofill {
   box-shadow: inset 0 0 0 1000px $color-white-smoke;
 
-  -webkit-text-fill-color: $color-nero;
+  -webkit-text-fill-color: rgba($color-default-black, 0.5);
 }
 
 // firefox placeholder \ invalid fix + ios bdrs

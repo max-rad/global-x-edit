@@ -67,7 +67,7 @@ mixin digital-television()
             name: "phone"
           }).custom-input--underline.digital-television__input
         .digital-television__button-wrapper
-          +btn({type: "submit", text: "Отправить"}).digital-television__button
+          +btn({type: "submit", text: "Подключить"})(data-open-modal="request").digital-television__button
           +price({price: "2800", unit: "год"})
         +agreement()
     .digital-television__image-wrapper.digital-television__image-wrapper--first

@@ -11,7 +11,7 @@ mixin service-card(data)
                 +icon(item.icon.name, item.icon.width, item.icon.height)
                 !=item.text
         .service-card__button-wrapper
-          +btn({href: data.button.href, text: data.button.text}).service-card__button
+          +btn({href: data.button.href, text: data.button.text})(data-open-modal=(data.button.text === "Подключить" ? "request" : false)).service-card__button
           if (data.price)
             +price({price: data.price})
       .service-card__image-wrapper(class=(data.image.mod ? `service-card__image-wrapper--${data.image.mod}` : false))

@@ -1,0 +1,28 @@
+mixin available-cameras()
+  -
+    const list = [
+      "Мира&nbsp;&mdash; Ленина",
+      "Высоцкого&nbsp;&mdash; Магистральная",
+      "Ленина&nbsp;&mdash; 40&nbsp;Лет Победы",
+      "Дзержинского&nbsp;&mdash; Ленина",
+      "Фонтан",
+      "Газпром",
+      "Ленина&nbsp;&mdash; Советская",
+      "Мемориал Великой Отечественной Войны",
+      "Кинотеатр Русь",
+      "Детский парк",
+      "Изыскателей&nbsp;&mdash; Высоцкого",
+      "Администрация",
+      "Зенит",
+      "Ж/Д Вокзал",
+      "Газпром (40&nbsp;лет Победы&nbsp;2)",
+    ]
+
+  section.available-cameras
+    .container
+      .available-cameras__wrapper
+        h2.available-cameras__title.title.title--t1 Для наших клиентов
+        p.available-cameras__description Для вашего удобства мы вывели список доступных камер видеонаблюдения
+        ul.list-reset.available-cameras__list
+          each item in list
+            li.available-cameras__item!=item

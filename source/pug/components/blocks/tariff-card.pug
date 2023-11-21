@@ -22,6 +22,6 @@ mixin tariff-card(data, mod)
         }).tariff-card__checkbox
         .tariff-card__button-wrapper
           +price({price: data.price})
-          +btn({type: "submit", text: "Подключить"}).tariff-card__button
+          +btn({type: "submit", text: "Подключить"})(data-open-modal="request").tariff-card__button
         if (data.text)
           p.tariff-card__postscript!=data.text

@@ -1,0 +1,20 @@
+mixin request()
+  .request
+    .request__form
+      form(method="post")
+        p.request__label Введите ваши контактные данные
+        .request__form-wrapper
+          +custom-input({
+            label: "Ваше имя:",
+            type: "text",
+            name: "name"
+          }).custom-input--underline.request__input
+          +custom-input({
+            label: "Ваш телефон:",
+            type: "tel",
+            name: "phone"
+          }).custom-input--underline.request__input
+          input(type="hidden" name="service-title")
+          input(type="hidden" name="service-price")
+        +btn({type: "submit", text: "Отправить"}).request__button
+        +agreement().request__agreement

@@ -110,7 +110,7 @@ mixin intro(data)
                 each item in data.list
                   li.intro__item!=item
             if (data.button)
-              +btn({href: "#", text: "Подключить"}).intro__button
+              +btn({href: "#", text: "Подключить"})(data-open-modal="request").intro__button
           .intro__image-wrapper
             +img('content/intro', data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
           if (data.imageTablet)

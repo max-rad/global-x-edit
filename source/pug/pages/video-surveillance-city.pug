@@ -1,0 +1,33 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Global X | Видеонаблюдение - Городские"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "video-surveillance-city.html"
+
+block main
+  main
+    +intro({
+      title: "Подключитесь к&nbsp;городской системе видеонаблюдения Ноябрьска бесплатно",
+      button: "true",
+      image: {
+        src: "intro-video-surveillance-city",
+        format: "webp",
+        width: "750",
+        height: "462",
+        alt: "intro"
+      }
+    }).intro--inner-page.intro--video-surveillance-city
+    +map()
+    +available-cameras()
+    +monitoring()
+    +order-form()
+    +camera-records()
+    +available-equipment()
+    +feedback()
+
+block modals
