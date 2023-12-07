@@ -69,7 +69,7 @@ export class Accordions {
       const parent = closeElement.closest('[data-accordion="parent"]');
       const content = closeElement.querySelector('[data-accordion="content"]');
       if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
-        content.style.maxHeight = '100%';
+        content.style.maxHeight = 'unset';
         return;
       }
       content.style.maxHeight = null;
@@ -80,7 +80,7 @@ export class Accordions {
       const content = openElement.querySelector('[data-accordion="content"]');
       const parent = openElement.closest('[data-accordion="parent"]');
       if (parent.dataset.destroy && !window.matchMedia(parent.dataset.destroy).matches) {
-        content.style.maxHeight = '100%';
+        content.style.maxHeight = 'unset';
         return;
       }
       content.style.transition = 'none';

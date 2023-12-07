@@ -2,34 +2,49 @@ mixin monitoring()
   -
     const list = [
       {
+        href: "https://camera.global-x.ru/CAM_Lenina-40letPobedi/embed.html",
         image: {
+          id: "image-monitor",
           src: "monitor",
           format: "webp",
           width: "390",
           height: "230",
           alt: "monitor"
         },
+        iframe: {
+          id: "video-monitor"
+        },
         title: "Монитор компьютера",
         description: "Просматривайте подключенные камеры через интернет!"
       },
       {
+        href: "https://camera.global-x.ru/CAM_Sovetskaya-86/embed.html",
         image: {
+          id: "image-tv",
           src: "tv",
           format: "webp",
           width: "390",
           height: "230",
           alt: "tv"
         },
+        iframe: {
+          id: "video-tv"
+        },
         title: "Экран телевизора",
         description: "Просматривайте Ваши видеокамеры сидя перед телевизором. Все что нужно&nbsp;&mdash; IPTV приставка."
       },
       {
+        href: "https://camera.global-x.ru/CAM_Park/embed.html",
         image: {
+          id: "image-mobile",
           src: "mobile",
           format: "webp",
           width: "390",
           height: "230",
           alt: "mobile"
+        },
+        iframe: {
+          id: "video-mobile"
         },
         title: "Мобильное устройство",
         description: "Смотрите прямую трансляцию с&nbsp;видеокамеры без ограничений по&nbsp;качеству"
@@ -38,13 +53,14 @@ mixin monitoring()
 
   section.monitoring
     .container
-      .monitoring__wrapper
+      .monitoring__wrapper(data-monitoring)
         h2.title.title--t1 Наблюдайте за&nbsp;происходящем на&nbsp;любом устройстве
         ul.list-reset.monitoring__list
           each item in list
             li.monitoring__item
-              a.monitoring__link(href="#")
+              a.monitoring__link(href="#" data-monitoring-link=item.href)
                 .monitoring__image-wrapper
-                  +img("content/monitoring", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                  +img("content/monitoring", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)(data-monitoring-image=item.image.id)
+                  iframe(frameborder="0" allowfullscreen="" data-monitoring-video=item.iframe.id)
                 h3.monitoring__title!=item.title
                 p.monitoring__description!=item.description

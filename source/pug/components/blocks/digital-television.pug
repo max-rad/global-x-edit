@@ -53,23 +53,30 @@ mixin digital-television()
             +icon(item.icon.name, item.icon.width, item.icon.height)
             p.digital-television__text!=item.text
     .digital-television__form
-      form(method="post")
-        p.digital-television__label Оставьте заявку на подключение услуги телевидения
-        .digital-television__form-wrapper
-          +custom-input({
-                label: "Ваше имя:",
-                type: "text",
-                name: "name"
-              }).custom-input--underline.digital-television__input
-          +custom-input({
-            label: "Ваш телефон:",
-            type: "tel",
-            name: "phone"
-          }).custom-input--underline.digital-television__input
-        .digital-television__button-wrapper
-          +btn({type: "submit", text: "Подключить"})(data-open-modal="request").digital-television__button
-          +price({price: "2800", unit: "год"})
-        +agreement()
+      p.digital-television__label Оставьте заявку на подключение услуги телевидения
+      +request({
+        mods: "request--grey",
+        title: "Оставьте заявку на подключение услуги телевидения",
+        price: "2800"
+      })
+    //- .digital-television__form
+    //-   form(method="post")
+    //-     p.digital-television__label Оставьте заявку на подключение услуги телевидения
+    //-     .digital-television__form-wrapper
+    //-       +custom-input({
+    //-             label: "Ваше имя:",
+    //-             type: "text",
+    //-             name: "name"
+    //-           }).custom-input--underline.digital-television__input
+    //-       +custom-input({
+    //-         label: "Ваш телефон:",
+    //-         type: "tel",
+    //-         name: "phone"
+    //-       }).custom-input--underline.digital-television__input
+    //-     .digital-television__button-wrapper
+    //-       +btn({type: "submit", text: "Подключить"})(data-open-modal="request").digital-television__button
+    //-       +price({price: "2800", unit: "год"})
+    //-     +agreement()
     .digital-television__image-wrapper.digital-television__image-wrapper--first
       +img("content", "tv-tnt", "webp", 210, 120, "ллоготип ТНТ")
     .digital-television__image-wrapper.digital-television__image-wrapper--second

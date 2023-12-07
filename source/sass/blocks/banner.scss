@@ -100,6 +100,7 @@
   &__image-wrapper {
     width: 594px;
     height: 335px;
+    overflow: hidden;
 
     @include vp-1023 {
       flex-shrink: 0;
@@ -123,13 +124,15 @@
 
     img {
       width: 594px;
-      height: 335px;
+      height: 420px;
+      margin-top: -42.5px;
 
       object-fit: contain;
 
       @include vp-1023 {
         width: 273px;
         height: 442px;
+        margin-top: 0;
       }
 
       @include vp-767 {

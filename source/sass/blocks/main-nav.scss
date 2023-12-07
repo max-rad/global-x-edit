@@ -46,7 +46,7 @@
       opacity: 0.8;
     }
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 23px;
@@ -171,27 +171,39 @@
       margin-right: 0;
     }
 
-    &--dropdown {
-      @media (min-width: 1280px) {
+    &.menu-item-has-children {
+      @media (min-width: 1279px) {
         @include focus-within {
-          .main-nav__dropdown::before {
+          .main-nav__dropdown-list::before {
             content: "";
           }
 
-          .main-nav__dropdown {
+          .main-nav__dropdown-list {
             display: block;
           }
         }
 
         @include hover-focus {
-          .main-nav__dropdown::before {
+          .main-nav__dropdown-list::before {
             content: "";
           }
 
-          .main-nav__dropdown {
+          .main-nav__dropdown-list {
             display: block;
           }
         }
+      }
+    }
+
+    &.is-active {
+      .main-nav__link {
+        img {
+          transform: rotate(90deg);
+        }
+      }
+
+      .main-nav__dropdown-list {
+        max-height: 100%;
       }
     }
 
@@ -236,7 +248,7 @@
       }
     }
 
-    svg {
+    img {
       display: none;
 
       flex-shrink: 0;
@@ -257,7 +269,7 @@
     }
   }
 
-  &__dropdown {
+  &__dropdown-list {
     z-index: 10;
     position: absolute;
     display: none;
@@ -265,6 +277,9 @@
     left: 0;
 
     width: 225px;
+    padding: 26px 28px 20px;
+
+    background-color: $color-default-white;
 
     @include vp-1279 {
       position: relative;
@@ -274,6 +289,11 @@
       left: 0;
 
       width: 100%;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+
+      background-color: $color-transparent;
 
       transition: max-height $trans-default;
     }
@@ -287,21 +307,8 @@
       width: 100%;
       height: 19px;
     }
-  }
 
-  &__dropdown-list {
-    position: relative;
-    padding: 26px 28px 20px;
-
-    background-color: $color-default-white;
-
-    @include vp-1279 {
-      padding: 24px 0;
-
-      background-color: $color-transparent;
-    }
-
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -325,6 +332,11 @@
 
     margin-bottom: 10px;
     padding-bottom: 10px;
+
+    @include vp-1279 {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
     &::after {
       content: "";
@@ -362,6 +374,10 @@
 
     transition: color $trans-default;
     transform: translate3d(0, 0, 0);
+
+    @include vp-1279 {
+      padding: 15px 0;
+    }
 
     @include hover-focus {
       color: $color-red-orange;

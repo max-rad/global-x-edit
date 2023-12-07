@@ -37,7 +37,7 @@
                       </svg></a>
                   </div>
                 </div>
-                <ul class="list-reset main-nav__list" data-accordion="parent" data-destroy="(max-width: 1279px)">
+                <ul class="list-reset main-nav__list">
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Интернет
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
@@ -48,16 +48,14 @@
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
                   </li>
-                  <li class="main-nav__item main-nav__item--dropdown" data-accordion="element"><a class="main-nav__link" href="#" data-accordion="button">Выгодно
+                  <li class="main-nav__item menu-item-has-children"><a class="main-nav__link" href="#">Выгодно
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
-                    <div class="main-nav__dropdown" data-accordion="content">
-                      <ul class="list-reset main-nav__dropdown-list">
-                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Интернет+TV</a></li>
-                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Конструктор тарифа</a></li>
-                      </ul>
-                    </div>
+                    <ul class="list-reset main-nav__dropdown-list">
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Интернет+TV</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Конструктор тарифа</a></li>
+                    </ul>
                   </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Видеонаблюдение
                       <svg width="24" height="24" aria-hidden="true">
@@ -69,16 +67,14 @@
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
                   </li>
-                  <li class="main-nav__item main-nav__item--dropdown" data-accordion="element"><a class="main-nav__link" href="#" data-accordion="button">Информация
+                  <li class="main-nav__item menu-item-has-children"><a class="main-nav__link" href="#">Информация
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="/img/sprite.svg#icon-chevron-right"></use>
                       </svg></a>
-                    <div class="main-nav__dropdown" data-accordion="content">
-                      <ul class="list-reset main-nav__dropdown-list">
-                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Новости</a></li>
-                        <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Вакансии</a></li>
-                      </ul>
-                    </div>
+                    <ul class="list-reset main-nav__dropdown-list">
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Новости</a></li>
+                      <li class="main-nav__dropdown-item"><a class="main-nav__dropdown-link" href="#">Вакансии</a></li>
+                    </ul>
                   </li>
                   <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты
                       <svg width="24" height="24" aria-hidden="true">
@@ -97,87 +93,139 @@
       </header>
       <main>
         <section class="intro">
-          <div class="container">
-            <div class="intro__wrapper">
-              <h1 class="visually-hidden">Север-Связь</h1>
-              <div class="intro__slider swiper" data-slider="intro">
-                <div class="intro__slides swiper-wrapper">
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
+          <h1 class="visually-hidden">Север-Связь</h1>
+          <div class="intro__slider swiper" data-slider="intro">
+            <div class="intro__slides swiper-wrapper">
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
                     </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="740" height="678" alt="background">
-                    </div>
-                  </div>
-                  <div class="intro__slide swiper-slide">
-                    <div class="intro__info">
-                      <h2 class="title title--h1 intro__title">Север-Связь</h2>
-                      <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
-                      <a class="btn intro__button" href="#">Подключить сейчас
-                      </a>
-                    </div>
-                    <div class="intro__image-wrapper"><img src="img/content/intro/intro-background.webp" srcset="img/content/intro/intro-background@2x.webp 2x" width="548" height="528" alt="background">
-                    </div>
-                  </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
+              </div>
+              <div class="intro__slide swiper-slide"><a class="intro__link" href="#">
+                  <div class="intro__info">
+                    <div class="container">
+                      <div class="intro__wrapper">
+                        <h2 class="title title--h1 intro__title">Север-Связь</h2>
+                        <p class="intro__description">Интернет, телевидение и&nbsp;видеонаблюдение для жизни и&nbsp;бизнеса</p>
+                        <button class="btn intro__button" type="button">Подключить сейчас
+                        </button>
+                      </div>
+                    </div>
+                  </div></a>
+                <div class="intro__image-wrapper">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/content/intro/intro-background-mobile.webp">
+                    <source media="(max-width: 1023px)" srcset="img/content/intro/intro-background-tablet.webp"><img src="img/content/intro/intro-background.webp" width="740" height="678">
+                  </picture>
+                </div>
               </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
         <section class="type-of-service">
@@ -202,11 +250,10 @@
             <div class="services__wrapper">
               <h2 class="title title--h3">Услуги</h2>
               <ul class="list-reset services__list">
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">Интернет</h3>
+                        <h3 class="service-card__title" data-card-title>Интернет</h3>
                         <p class="service-card__description">Надежный интернет с&nbsp;высокой скоростью соединения без дополнительных устройств и&nbsp;по&nbsp;доступной цене</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -225,23 +272,21 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
-                          </a>
+                          <button class="btn service-card__button" type="button">Подключить
+                          </button>
                           <div class="price">
-                            <p class="price__price">от&nbsp;550<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
+                            <p class="price__price" data-card-price="true">от&nbsp;550<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
                           </div>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--first"><img src="img/content/service/image-internet.webp" srcset="img/content/service/image-internet@2x.webp 2x" width="291" height="196" alt="image">
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-internet.webp" srcset="img/content/service/image-internet@2x.webp 2x" width="291" height="196" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">TV</h3>
+                        <h3 class="service-card__title" data-card-title>TV</h3>
                         <p class="service-card__description">Смотрите любимые&nbsp;ТВ каналы в&nbsp;отличном качестве</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -260,25 +305,21 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
-                          </a>
+                          <button class="btn service-card__button" type="button">Подключить
+                          </button>
                           <div class="price">
-                            <p class="price__price">от&nbsp;200<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
+                            <p class="price__price" data-card-price="true">от&nbsp;200<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
                           </div>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--second"><img src="img/content/service/image-tv.webp" srcset="img/content/service/image-tv@2x.webp 2x" width="251" height="269" alt="image">
-                        <div class="service-card__background-image"><img src="img/content/service/icon-youtube.webp" srcset="img/content/service/icon-youtube@2x.webp 2x" width="159" height="141" alt="icon">
-                        </div>
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-tv.webp" srcset="img/content/service/image-tv@2x.webp 2x" width="251" height="269" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">Интернет + TV</h3>
+                        <h3 class="service-card__title" data-card-title>Интернет + TV</h3>
                         <p class="service-card__description">Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -304,25 +345,21 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
-                          </a>
+                          <button class="btn service-card__button" type="button">Подключить
+                          </button>
                           <div class="price">
-                            <p class="price__price">от&nbsp;650<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
+                            <p class="price__price" data-card-price="true">от&nbsp;650<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
                           </div>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--third"><img src="img/content/service/image-internet-tv.webp" srcset="img/content/service/image-internet-tv@2x.webp 2x" width="336" height="236" alt="image">
-                        <div class="service-card__background-image"><img src="img/content/service/icon-wifi-2.webp" srcset="img/content/service/icon-wifi-2@2x.webp 2x" width="112" height="111" alt="icon">
-                        </div>
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-internet-tv.webp" srcset="img/content/service/image-internet-tv@2x.webp 2x" width="336" height="236" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">Видеонаблюдение</h3>
+                        <h3 class="service-card__title" data-card-title>Видеонаблюдение</h3>
                         <p class="service-card__description">Наблюдайте за&nbsp;вашей недвижимостью в&nbsp;прямом эфире или в&nbsp;записи из&nbsp;любой точки мира</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -341,23 +378,21 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#" data-open-modal="request">Подключить
-                          </a>
+                          <button class="btn service-card__button" type="button">Подключить
+                          </button>
                           <div class="price">
-                            <p class="price__price">от&nbsp;350<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
+                            <p class="price__price" data-card-price="true">от&nbsp;350<span class="price__units"><span class="price__unit">руб</span><span class="price__unit">мес</span></span></p>
                           </div>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--fourth"><img src="img/content/service/image-video.webp" srcset="img/content/service/image-video@2x.webp 2x" width="259" height="235" alt="image">
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-video.webp" srcset="img/content/service/image-video@2x.webp 2x" width="259" height="235" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">Оборудование</h3>
+                        <h3 class="service-card__title" data-card-title>Оборудование</h3>
                         <p class="service-card__description">Пакет цифрового телевидения + безлимитный интернет по&nbsp;выгодной цене</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -376,22 +411,18 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Узнать подробнее
-                          </a>
+                          <button class="btn service-card__button" type="button">Узнать подробнее
+                          </button>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--fifth"><img src="img/content/service/image-equipment.webp" srcset="img/content/service/image-equipment@2x.webp 2x" width="356" height="251" alt="image">
-                        <div class="service-card__background-image"><img src="img/content/service/icon-wifi-3.webp" srcset="img/content/service/icon-wifi-3@2x.webp 2x" width="112" height="111" alt="icon">
-                        </div>
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-equipment.webp" srcset="img/content/service/image-equipment@2x.webp 2x" width="356" height="251" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
-                <li class="services__item">
-                  <div class="service-card">
+                <li class="services__item"><a class="service-card" href="#" data-card data-card-link>
                     <div class="service-card__wrapper">
                       <div class="service-card__info-wrapper">
-                        <h3 class="service-card__title">Конструктор тарифа</h3>
+                        <h3 class="service-card__title" data-card-title>Конструктор тарифа</h3>
                         <p class="service-card__description">Соберите свой пакет услуг и&nbsp;получите самую выгодную цену</p>
                         <ul class="list-reset service-card__list">
                           <li class="service-card__item">
@@ -417,14 +448,13 @@
                           </li>
                         </ul>
                         <div class="service-card__button-wrapper">
-                          <a class="btn service-card__button" href="#">Узнать подробнее
-                          </a>
+                          <button class="btn service-card__button" type="button">Узнать подробнее
+                          </button>
                         </div>
                       </div>
-                      <div class="service-card__image-wrapper service-card__image-wrapper--sixth"><img src="img/content/service/image-tariff.webp" srcset="img/content/service/image-tariff@2x.webp 2x" width="356" height="251" alt="image">
+                      <div class="service-card__image-wrapper"><img src="img/content/service/image-tariff.webp" srcset="img/content/service/image-tariff@2x.webp 2x" width="356" height="251" alt="image">
                       </div>
-                    </div>
-                  </div>
+                    </div></a>
                 </li>
               </ul>
             </div>
@@ -536,12 +566,15 @@
                       <input type="tel" name="phone">
                     </label>
                   </div>
-                  <input type="hidden" name="service-title">
-                  <input type="hidden" name="service-price">
+                  <input type="hidden" name="service-title" data-service-title>
+                  <input type="hidden" name="service-price" data-service-price>
+                  <input type="hidden" name="static-ip" data-static-ip>
                 </div>
-                <button class="btn request__button" type="submit">Отправить
-                </button>
-                <div class="agreement">
+                <div class="request__button-wrapper">
+                  <button class="btn request__button" type="submit">Отправить
+                  </button>
+                </div>
+                <div class="agreement request__agreement">
                   <p class="agreement__text">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой обработки персональных данных</a></p>
                 </div>
               </form>

@@ -66,6 +66,14 @@
     }
   }
 
+  [data-tariff-constructor-option] {
+    display: none;
+  }
+
+  [data-tariff-constructor-option="internet"] {
+    display: flex;
+  }
+
   &__term {
     align-self: flex-start;
     width: 100%;

@@ -3,6 +3,7 @@ mixin custom-input(options = {})
   - const inputType = options.type ? options.type : false
   - const inputName = options.name ? options.name : false
   - const inputPlaceholder = options.placeholder ? options.placeholder : false
+  - const inputRequired = options.required ? options.required : false
 
   - const icon = options.icon ? options.icon : false
 
@@ -11,7 +12,7 @@ mixin custom-input(options = {})
     label
       if (inputLabel)
         span.custom-input__label!=inputLabel
-      input(type=inputType name=inputName placeholder=inputPlaceholder)
+      input(type=inputType name=inputName placeholder=inputPlaceholder required=inputRequired)
       if (icon)
         span.custom-input__icon
           +icon(icon.name, icon.width, icon.height)

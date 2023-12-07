@@ -3,6 +3,7 @@ mixin custom-select(options = {})
   - const selectLabel = options.label ? options.label : false
   - const selectPlaceholder = options.placeholder ? options.placeholder : ""
   - const selectOptionsList = options.optionsList ? options.optionsList : false
+  - const isTabsControl = options.isTabsControl ? true : false
 
   .custom-select(data-select data-select-name=selectName)&attributes(attributes)
     if (selectLabel)
@@ -11,10 +12,10 @@ mixin custom-select(options = {})
       span.custom-select__text!=selectPlaceholder
       span.custom-select__icon
         +icon("icon-chevron-right", 30, 30)
-    ul.custom-select__list(role="listbox")
+    ul.custom-select__list(role="listbox" data-tabs=(isTabsControl ? "controls" : false))
       each item in selectOptionsList
         - const ariaSelected = item.isActive ? "true" : "false"
-        li.custom-select__item(tabindex="0" data-select-item data-select-value=item.value aria-selected=ariaSelected role="option")!=item.text
+        li.custom-select__item(tabindex="0" data-select-item data-select-value=item.value data-tabs=(isTabsControl ? "control" : false) aria-selected=ariaSelected role="option")!=item.text
     select(name=selectName tabindex="-1")
       option(value="")!=selectPlaceholder
       each item in selectOptionsList

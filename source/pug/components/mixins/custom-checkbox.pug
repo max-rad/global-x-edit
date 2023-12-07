@@ -2,10 +2,15 @@ mixin custom-checkbox(options = {})
   - const inputLabel = options.label ? options.label : false
   - const inputName = options.name ? options.name : false
   - const inputChecked = options.checked ? options.checked : false
+  - const dataCard = options.dataCard ? options.dataCard : false
+  - const dataCustomTariff = options.dataCustomTariff ? options.dataCustomTariff : false
+  - const dataCustomTariffPrice = options.dataCustomTariffPrice ? options.dataCustomTariffPrice : false
+  - const dataTariffConstructor = options.dataTariffConstructor ? options.dataTariffConstructor : false
+  - const dataTariffConstructorPrice = options.dataTariffConstructorPrice ? options.dataTariffConstructorPrice : false
 
   .custom-checkbox&attributes(attributes)
     label
-      input(type="checkbox" name=inputName checked=inputChecked)
+      input(type="checkbox" name=inputName checked=inputChecked data-card-input=dataCard data-custom-tariff-checkbox=dataCustomTariff data-custom-tariff-price=dataCustomTariffPrice data-tariff-constructor-checkbox=dataTariffConstructor data-tariff-constructor-price=dataTariffConstructorPrice)
       span.custom-checkbox__icon
         +icon("icon-check", 14, 14)
       if (inputLabel)

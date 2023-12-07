@@ -1,4 +1,4 @@
-mixin request()
+mixin request(data)
   .request
     .request__form
       form(method="post")
@@ -14,7 +14,11 @@ mixin request()
             type: "tel",
             name: "phone"
           }).custom-input--underline.request__input
-          input(type="hidden" name="service-title")
-          input(type="hidden" name="service-price")
-        +btn({type: "submit", text: "Отправить"}).request__button
+          input(type="hidden" name="service-title" data-service-title)
+          input(type="hidden" name="service-price" data-service-price)
+          input(type="hidden" name="static-ip" data-static-ip)
+        .request__button-wrapper
+          +btn({type: "submit", text: "Отправить"}).request__button
+          //- if (data.price)
+          //-   +price({price: data.price, unit: "год"}).request__price
         +agreement().request__agreement

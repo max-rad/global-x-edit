@@ -8,6 +8,8 @@
   }
 
   @include vp-479 {
+    width: calc(100% + 20px * 2);
+    margin: 0 -20px;
     padding: 20px;
   }
 
@@ -110,7 +112,7 @@
       margin: 0 0 20px;
     }
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 22px;
@@ -146,7 +148,7 @@
       margin-bottom: 0;
     }
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 24px;

@@ -1,8 +1,8 @@
 mixin service-card(data)
-  .service-card
+  a.service-card(href=data.button.href data-card data-card-link)
     .service-card__wrapper
       .service-card__info-wrapper
-        h3.service-card__title!=data.title
+        h3.service-card__title(data-card-title)!=data.title
         p.service-card__description!=data.description
         ul.list-reset.service-card__list
           each item in data.info
@@ -11,11 +11,8 @@ mixin service-card(data)
                 +icon(item.icon.name, item.icon.width, item.icon.height)
                 !=item.text
         .service-card__button-wrapper
-          +btn({href: data.button.href, text: data.button.text})(data-open-modal=(data.button.text === "Подключить" ? "request" : false)).service-card__button
+          +btn({type: "button", text: data.button.text})().service-card__button
           if (data.price)
-            +price({price: data.price})
-      .service-card__image-wrapper(class=(data.image.mod ? `service-card__image-wrapper--${data.image.mod}` : false))
+            +price({price: data.price, dataCard: "true"})
+      .service-card__image-wrapper
         +img("content/service", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
-        if (data.backgroundImage)
-          .service-card__background-image
-            +img("content/service", data.backgroundImage.src, data.backgroundImage.format, data.backgroundImage.width, data.backgroundImage.height, data.backgroundImage.alt)

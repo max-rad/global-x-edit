@@ -126,6 +126,10 @@
     }
   }
 
+  [data-tariff-constructor-type="internet-and-tv"] {
+    display: none;
+  }
+
   &__radio {
     margin-right: 20px;
 
@@ -172,7 +176,7 @@
 
     &.is-active {
       .tariff-constructor__button {
-        svg {
+        img {
           transform: rotate(90deg);
         }
       }
@@ -220,7 +224,7 @@
       user-select: none;
     }
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 40px;
@@ -267,7 +271,7 @@
 
     color: $color-default-black;
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 21px;

@@ -3,7 +3,7 @@ mixin tariff-constructor()
     .container
       .tariff-constructor__wrapper
         h2.title.title--t1 Выберите тарифные опции
-        .tariff-constructor__form
+        .tariff-constructor__form(data-tariff-constructor data-validate-form)
           form(method="get")
             .tariff-constructor__form-wrapper
               .tariff-constructor__options
@@ -12,30 +12,60 @@ mixin tariff-constructor()
                     label: "Безлимитный интернет",
                     name: "unlimited-internet",
                     checked: "true"
-                  }).tariff-constructor__checkbox
+                  }).custom-checkbox--disabled.tariff-constructor__checkbox
                   p.tariff-constructor__description Интернет по&nbsp;технологии FTTB (&laquo;оптический кабель до&nbsp;дома&raquo;) с&nbsp;высокой скоростью соединения. Подключение напрямую к&nbsp;Интернету
                   p.tariff-constructor__label Выберите скорость
-                  .tariff-constructor__radio-buttons
+                  .tariff-constructor__radio-buttons(data-tariff-constructor-type="internet")
                     +custom-radio({
                       label: "100 мбит/c",
                       name: "speed",
-                      value: "100Mbps",
-                      checked: "true"
+                      value: "100",
+                      checked: "true",
+                      dataTariffConstructor: "Стартовый-Интернет",
+                      dataTariffConstructorPrice: "550"
                     }).tariff-constructor__radio
                     +custom-radio({
                       label: "300 мбит/c",
                       name: "speed",
-                      value: "300Mbps"
+                      value: "300",
+                      dataTariffConstructor: "Любимый-Интернет",
+                      dataTariffConstructorPrice: "700"
                     }).tariff-constructor__radio
                     +custom-radio({
                       label: "1000 мбит/c",
                       name: "speed",
-                      value: "1000Mbps"
+                      value: "1000",
+                      dataTariffConstructor: "Игровой-Интернет",
+                      dataTariffConstructorPrice: "1000"
+                    }).tariff-constructor__radio
+                  .tariff-constructor__radio-buttons(data-tariff-constructor-type="internet-and-tv")
+                    +custom-radio({
+                      label: "100 мбит/c",
+                      name: "speed",
+                      value: "100",
+                      dataTariffConstructor: "Стартовый-Интернет+TV",
+                      dataTariffConstructorPrice: "550"
                     }).tariff-constructor__radio
                     +custom-radio({
-                      label: "не знаю",
+                      label: "300 мбит/c",
                       name: "speed",
-                      value: "dont-know"
+                      value: "300",
+                      dataTariffConstructor: "Любимый-Интернет+TV",
+                      dataTariffConstructorPrice: "700"
+                    }).tariff-constructor__radio
+                    +custom-radio({
+                      label: "1000 мбит/c",
+                      name: "speed",
+                      value: "1000",
+                      dataTariffConstructor: "Игровой-Интернет+TV",
+                      dataTariffConstructorPrice: "1000"
+                    }).tariff-constructor__radio
+                    +custom-radio({
+                      label: "1500 мбит/c",
+                      name: "speed",
+                      value: "1500",
+                      dataTariffConstructor: "Премиум-Интернет+TV",
+                      dataTariffConstructorPrice: "1500"
                     }).tariff-constructor__radio
                 .tariff-constructor__accordion(data-accordion="parent" data-destroy="(max-width: 1023px)")
                   .tariff-constructor__element(data-accordion="element")
@@ -43,7 +73,8 @@ mixin tariff-constructor()
                       +custom-checkbox({
                         label: "Пакет цифрового <span class='desktop'>телевидения</span> <span class='tablet'>TV</span>",
                         name: "digital-tv",
-                        checked: "true"
+                        dataTariffConstructor: "television",
+                        dataTariffConstructorPrice: "800",
                       }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
                       button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
                         +icon("icon-chevron-right", 40, 40)
@@ -71,7 +102,8 @@ mixin tariff-constructor()
                       +custom-checkbox({
                         label: "Статический IP-адрес",
                         name: "static-ip",
-                        checked: "true"
+                        dataTariffConstructor: "static-ip",
+                        dataTariffConstructorPrice: "350"
                       }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
                       button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
                         +icon("icon-chevron-right", 40, 40)
@@ -83,6 +115,8 @@ mixin tariff-constructor()
                       +custom-checkbox({
                         label: "Видеонаблюдение",
                         name: "video",
+                        dataTariffConstructor: "video",
+                        dataTariffConstructorPrice: "350"
                       }).tariff-constructor__checkbox.tariff-constructor__checkbox--accordion
                       button.btn-reset.tariff-constructor__button(type="button" data-accordion="button")
                         +icon("icon-chevron-right", 40, 40)

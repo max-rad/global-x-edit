@@ -65,16 +65,15 @@ mixin header(headerMods, currentUrl)
             span
           .main-nav__menu
             +info-bar()
-            ul.list-reset.main-nav__list(data-accordion="parent" data-destroy="(max-width: 1279px)")
+            ul.list-reset.main-nav__list
               each item in navLinks
-                li.main-nav__item(class={"main-nav__item--dropdown" : item.dropdown} data-accordion=(item.dropdown ? "element" : false))
-                  a.main-nav__link(href=item.href data-accordion=(item.dropdown ? "button" : false))!=item.text
+                li.main-nav__item(class={"menu-item-has-children" : item.dropdown})
+                  a.main-nav__link(href=item.href)!=item.text
                     +icon("icon-chevron-right", 24, 24)
                   if(item.dropdown)
-                    .main-nav__dropdown(data-accordion="content")
-                      ul.list-reset.main-nav__dropdown-list
-                        each subitem in item.dropdown
-                          li.main-nav__dropdown-item
-                            a.main-nav__dropdown-link(href=subitem.href)!=subitem.text
+                    ul.list-reset.main-nav__dropdown-list
+                      each subitem in item.dropdown
+                        li.main-nav__dropdown-item
+                          a.main-nav__dropdown-link(href=subitem.href)!=subitem.text
             a.main-nav__phone(href="tel:+73496458000") +7 (3496) 45-80-00
       +widget()

@@ -20,13 +20,17 @@ mixin product()
       .product__wrapper
         h1.title.title--t1 Медиацентр TVIP S-Box IPTV/OTT v.530
         .product__content
-          .product__slider.swiper(data-slider="product")
-            .product__slides.swiper-wrapper
-              .product__slide.swiper-slide
-                .product__image-wrapper
-                  +img("content/products", "media-center-tvip-s-box", "webp", 600, 400, "product")
-            .swiper-button-prev
-            .swiper-button-next
+          .product__slider(data-slider="product")
+            .product__slider-wrapper.swiper
+              .product__slides.swiper-wrapper
+                .product__slide.swiper-slide
+                  .product__image-wrapper
+                    +img("content/products", "media-center-tvip-s-box", "webp", 600, 400, "product")
+                .product__slide.swiper-slide
+                  .product__image-wrapper
+                    +img("content/products", "media-center-tvip-s-box", "webp", 600, 400, "product")
+            .swiper-button-prev(data-button-prev)
+            .swiper-button-next(data-button-next)
           .product__info
             h2.product__label Основные характеристики:
             dl.product__list

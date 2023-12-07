@@ -1,0 +1,126 @@
+.success {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 90px 0;
+
+    @include vp-1199 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: unset;
+      margin: 0;
+      padding: 64px 0;
+    }
+
+    @include vp-767 {
+      padding: 60px 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 300px;
+    line-height: 390px;
+
+    color: $color-default-black;
+
+    @include vp-1199 {
+      margin: 0 0 40px;
+
+      font-size: 200px;
+      line-height: 160px;
+    }
+
+    @include vp-767 {
+      font-size: 120px;
+      line-height: 156px;
+    }
+  }
+
+  &__image-wrapper {
+    display: block;
+    width: 554px;
+    height: 394px;
+
+    @include vp-1199 {
+      width: 172px;
+      height: 186px;
+    }
+
+    @include vp-767 {
+      width: 142px;
+      height: 156px;
+    }
+
+    img {
+      width: 554px;
+      height: 394px;
+
+      object-fit: cover;
+
+      @include vp-1199 {
+        width: 172px;
+        height: 186px;
+      }
+
+      @include vp-767 {
+        width: 142px;
+        height: 156px;
+      }
+    }
+  }
+
+  &__info {
+    margin-left: 40px;
+
+    @include vp-1199 {
+      margin-left: 0;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 10px;
+
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 65px;
+
+    color: $color-default-black;
+
+    @include vp-1199 {
+      font-size: 38px;
+      line-height: 49px;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+      line-height: 47px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 20px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+
+    color: $color-default-black;
+
+    @include vp-1199 {
+      margin: 0 0 40px;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    max-width: 293px;
+  }
+}

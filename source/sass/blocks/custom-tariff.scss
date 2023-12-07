@@ -115,6 +115,8 @@
   }
 
   &__radio-buttons {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 32px;
   }
 
@@ -124,6 +126,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  [data-tariff-constructor-type="internet-and-tv"] {
+    display: none;
   }
 
   &__checkboxes {

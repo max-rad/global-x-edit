@@ -227,3 +227,9 @@ block main
     +feedback()
 
 block modals
+  +modal({
+    title: "Оставьте заявку на&nbsp;подключение",
+    description: "После отправки формы с&nbsp;вами свяжется наш менеджер и&nbsp;согласует время и&nbsp;место подключения"
+  },
+  "modal--request")(data-modal="request")
+    +request()

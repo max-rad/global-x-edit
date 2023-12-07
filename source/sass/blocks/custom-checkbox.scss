@@ -1,6 +1,12 @@
 .custom-checkbox {
   position: relative;
 
+  &--disabled {
+    label {
+      pointer-events: none;
+    }
+  }
+
   label {
     display: inline-flex;
     align-items: center;
@@ -24,7 +30,7 @@
 
     transition: background-color $trans-default;
 
-    svg {
+    img {
       flex-shrink: 0;
 
       width: 14px;
@@ -50,7 +56,7 @@
   input:checked + .custom-checkbox__icon {
     background-color: $color-red-orange;
 
-    svg {
+    img {
       visibility: visible;
       opacity: 1;
     }

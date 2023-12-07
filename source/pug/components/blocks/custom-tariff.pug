@@ -2,7 +2,7 @@ mixin custom-tariff()
   section.custom-tariff
     .container
       .custom-tariff__wrapper
-        .custom-tariff__form
+        .custom-tariff__form(data-tariff-constructor)
           h2.title.title--t1 Соберите свой тариф
           form(method="get")
             .custom-tariff__form-wrapper
@@ -11,43 +11,76 @@ mixin custom-tariff()
                   +img("content", "icon-global-red", "webp", 24, 24, "red globe")
                   | Интернет
                 p.custom-tariff__legend Выберите скорость:
-                .custom-tariff__radio-buttons
-                  +custom-radio({
-                    label: "100 мбит/c",
-                    name: "speed",
-                    value: "100Mbps",
-                    checked: "true"
-                  }).custom-tariff__radio
-                  +custom-radio({
-                    label: "300 мбит/c",
-                    name: "speed",
-                    value: "300Mbps"
-                  }).custom-tariff__radio
-                  +custom-radio({
-                    label: "1000 мбит/c",
-                    name: "speed",
-                    value: "1000Mbps"
-                  }).custom-tariff__radio
-                  +custom-radio({
-                    label: "не знаю",
-                    name: "speed",
-                    value: "dont-know"
-                  }).custom-tariff__radio
+                  .custom-tariff__radio-buttons(data-tariff-constructor-type="internet")
+                    +custom-radio({
+                      label: "100 мбит/c",
+                      name: "speed",
+                      value: "100Mbps",
+                      checked: "true",
+                      dataTariffConstructor: "Стартовый-Интернет",
+                      dataTariffConstructorPrice: "550"
+                    }).custom-tariff__radio
+                    +custom-radio({
+                      label: "350 мбит/c",
+                      name: "speed",
+                      value: "350Mbps",
+                      dataTariffConstructor: "Любимый-Интернет",
+                      dataTariffConstructorPrice: "700"
+                    }).custom-tariff__radio
+                    +custom-radio({
+                      label: "1000 мбит/c",
+                      name: "speed",
+                      value: "1000Mbps",
+                      dataTariffConstructor: "Игровой-Интернет",
+                      dataTariffConstructorPrice: "1000"
+                    }).custom-tariff__radio
+                  .custom-tariff__radio-buttons(data-tariff-constructor-type="internet-and-tv")
+                    +custom-radio({
+                      label: "100 мбит/c",
+                      name: "speed",
+                      value: "100Mbps",
+                      dataTariffConstructor: "Стартовый-Интернет+TV",
+                      dataTariffConstructorPrice: "599"
+                    }).custom-tariff__radio
+                    +custom-radio({
+                      label: "350 мбит/c",
+                      name: "speed",
+                      value: "350Mbps",
+                      dataTariffConstructor: "Особый-Интернет+TV",
+                      dataTariffConstructorPrice: "850"
+                    }).custom-tariff__radio
+                    +custom-radio({
+                      label: "1000 мбит/c",
+                      name: "speed",
+                      value: "1000Mbps",
+                      dataTariffConstructor: "Премиум-Интернет+TV",
+                      dataTariffConstructorPrice: "550"
+                    }).custom-tariff__radio
+                    +custom-radio({
+                      label: "не знаю",
+                      name: "speed",
+                      value: "dont-know",
+                      dataTariffConstructor: "Не знаю",
+                      dataTariffConstructorPrice: "0"
+                    }).custom-tariff__radio
                 .custom-tariff__checkboxes
                   +custom-checkbox({
                     label: "Телевидение",
                     name: "tv",
-                    checked: "true"
+                    dataTariffConstructor: "television"
                   }).custom-tariff__checkbox
                   +custom-checkbox({
                     label: "Видеонаблюдение",
                     name: "video",
+                    dataTariffConstructor: "video",
+                    dataTariffConstructorPrice: "350",
                     checked: "true"
                   }).custom-tariff__checkbox
                   +custom-checkbox({
                     label: "Статический IP-адрес",
                     name: "static-ip",
-                    checked: "true"
+                    dataTariffConstructor: "static-ip",
+                    dataTariffConstructorPrice: "350"
                   }).custom-tariff__checkbox
               .custom-tariff__info
                 p.custom-tariff__title Введите контактные данные
@@ -62,6 +95,9 @@ mixin custom-tariff()
                     type: "tel",
                     name: "phone"
                   }).custom-input--underline.custom-tariff__input
-                +price({label: "Итого:", price: "550"})
-                +btn({type: "submit", text: "Подключить"}).custom-tariff__button
+                  input(type="hidden" name="tariff-name" data-service-name)
+                  input(type="hidden" name="tariff-speed" data-service-speed)
+                  input(type="hidden" name="tariff-price" data-service-total-price)
+                +price({label: "Итого:", price: "550", dataTariffConstructor: "true"})
+                +btn({type: "submit", text: "Подключить"})(data-tariff-constructor-button).custom-tariff__button
                 +agreement()

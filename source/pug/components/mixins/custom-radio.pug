@@ -3,10 +3,15 @@ mixin custom-radio(options = {})
   - const inputName = options.name ? options.name : false
   - const inputValue = options.value ? options.value : false
   - const inputChecked = options.checked ? options.checked : false
+  - const dataCustomTariff = options.dataCustomTariff ? options.dataCustomTariff : false
+  - const dataCustomTariffPrice = options.dataCustomTariffPrice ? options.dataCustomTariffPrice : false
+  - const dataTariffConstructor = options.dataTariffConstructor ? options.dataTariffConstructor : false
+  - const dataTariffConstructorPrice = options.dataTariffConstructorPrice ? options.dataTariffConstructorPrice : false
+
 
   .custom-radio&attributes(attributes)
     label
-      input(type="radio" name=inputName value=inputValue checked=inputChecked)
+      input(type="radio" name=inputName value=inputValue checked=inputChecked data-custom-tariff-radio=dataCustomTariff data-custom-tariff-price=dataCustomTariffPrice data-tariff-constructor-radio=dataTariffConstructor data-tariff-constructor-price=dataTariffConstructorPrice)
       span.custom-radio__icon
       if (inputLabel)
         span.custom-radio__label!=inputLabel

@@ -247,61 +247,111 @@ mixin channel-list()
     .container
       .channel-list__wrapper
         h2.title.title--t1 Список каналов
-        .channel-list__buttons
-          button(type="button").btn-reset.channel-list__button Все
-          button(type="button").btn-reset.channel-list__button Познавательные
-          button(type="button").btn-reset.channel-list__button Информационные
-          button(type="button").btn-reset.channel-list__button Детские
-          button(type="button").btn-reset.channel-list__button Развлекательные
-          button(type="button").btn-reset.channel-list__button Музыкальные
-          button(type="button").btn-reset.channel-list__button Спортивные
-          button(type="button").btn-reset.channel-list__button Кино
-          button(type="button").btn-reset.channel-list__button HD-каналы
-        +custom-select({
-          name: "channel-list",
-          placeholder: "Категории каналов",
-          optionsList: [
-            {
-              value: "all",
-              text: "Все"
-            },
-            {
-              value: "educational",
-              text: "Познавательные"
-            },
-            {
-              value: "information",
-              text: "Информационные"
-            },
-            {
-              value: "childish",
-              text: "Детские"
-            },
-            {
-              value: "entertainment",
-              text: "Развлекательные"
-            },
-            {
-              value: "musical",
-              text: "Музыкальные"
-            },
-            {
-              value: "sport",
-              text: "Спортивные"
-            },
-            {
-              value: "movie",
-              text: "Кино"
-            },
-            {
-              value: "hd-channels",
-              text: "HD-каналы"
-            }
-          ]
-        }).channel-list__select
-        ul.list-reset.channel-list__list
-          each item in list
-            li.channel-list__item
-              .channel-list__image-wrapper
-                +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
-              p.channel-list__text!=item.text
+        .channel-list__tabs(data-tabs="parent")
+          +custom-select({
+            name: "channel-list",
+            placeholder: "Категории каналов",
+            isTabsControl: "true",
+            optionsList: [
+              {
+                value: "all",
+                text: "Все"
+              },
+              {
+                value: "educational",
+                text: "Познавательные"
+              },
+              {
+                value: "information",
+                text: "Информационные"
+              },
+              {
+                value: "childish",
+                text: "Детские"
+              },
+              {
+                value: "entertainment",
+                text: "Развлекательные"
+              },
+              {
+                value: "musical",
+                text: "Музыкальные"
+              },
+              {
+                value: "sport",
+                text: "Спортивные"
+              },
+              {
+                value: "movie",
+                text: "Кино"
+              },
+              {
+                value: "hd-channels",
+                text: "HD-каналы"
+              }
+            ]
+          }).channel-list__select
+          .channel-list__content(data-tabs="content")
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text
+            .channel-list__element(data-tabs="element")
+              ul.list-reset.channel-list__list
+                each item in list
+                  li.channel-list__item
+                    .channel-list__image-wrapper
+                      +img("content/channel-list", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                    p.channel-list__text!=item.text

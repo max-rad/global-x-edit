@@ -2,7 +2,7 @@ mixin price(data)
   .price&attributes(attributes)
     if(data.label)
       p.price__label!=data.label
-    p.price__price!=data.price
+    p.price__price(data-card-price=data.dataCard data-custom-tariff-total-price=data.dataCustomTariff data-tariff-constructor-total-price=data.dataTariffConstructor)!=data.price
       span.price__units
         span.price__unit руб
         if (data.unit)

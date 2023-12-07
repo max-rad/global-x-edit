@@ -1,0 +1,11 @@
+mixin success()
+  section.success
+    .container
+      .success__wrapper
+        h1.success__title
+          span.success__image-wrapper
+            +img("content/404", "404", "webp", 169, 227, "404")
+        .success__info
+          h2.success__subtitle Страница не&nbsp;найдена
+          p.success__description Возможно вы&nbsp;ввели неправильный адрес или страница была удалена
+          +btn({href: "#", text: "Перейти на главную"}).success__button

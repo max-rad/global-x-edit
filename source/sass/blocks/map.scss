@@ -21,6 +21,30 @@
   }
 
   &__map {
+    width: 100%;
+    height: 615px;
 
+    @include vp-1023 {
+      height: 532px;
+    }
+
+    @include vp-767 {
+      height: 437px;
+    }
+
+    img {
+      width: 100%;
+      height: 615px;
+
+      object-fit: cover;
+
+      @include vp-1023 {
+        height: 532px;
+      }
+
+      @include vp-767 {
+        height: 437px;
+      }
+    }
   }
 }

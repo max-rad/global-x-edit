@@ -2,7 +2,7 @@
   &__wrapper {
     padding: 64px 0 40px;
 
-    @include vp-1023 {
+    @include vp-1279 {
       padding: 40px 0 64px;
     }
 
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include vp-1023 {
+    @include vp-1279 {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
@@ -24,20 +24,37 @@
   }
 
   &__slider {
+    position: relative;
     width: 100%;
-    max-width: calc(600px + 48px * 2);
-    margin: 0;
-    padding: 0 48px;
+    max-width: 696px;
 
-    @include vp-1023 {
+    @include vp-1279 {
+      max-width: unset;
+    }
+
+    @include vp-767 {
+      max-width: 382px;
+      margin: 0 auto 52px;
+    }
+  }
+
+  &__slider-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 48px;
+
+    @include vp-1279 {
       max-width: unset;
       margin: 0 0 32px;
     }
 
     @include vp-767 {
-      max-width: calc(310px + 36px * 2);
-      margin: 0 auto 52px;
-      padding: 0 36px;
+      max-width: 310px;
+      margin: 0 36px;
+    }
+
+    @include vp-479 {
+      margin: 0 auto;
     }
   }
 
@@ -81,7 +98,7 @@
     max-width: 510px;
     margin-left: 30px;
 
-    @include vp-1023 {
+    @include vp-1279 {
       max-width: unset;
       margin-left: 0;
     }
@@ -105,7 +122,7 @@
   &__list {
     margin: 0 0 65px;
 
-    @include vp-1023 {
+    @include vp-1279 {
       margin: 0 0 30px;
     }
   }
@@ -133,7 +150,7 @@
     border-bottom: 1px dotted rgba($color-default-black, 0.5);
     color: $color-default-black;
 
-    @include vp-1023 {
+    @include vp-1279 {
       max-width: unset;
     }
 
@@ -144,6 +161,7 @@
   }
 
   &__description {
+    width: 100%;
     min-width: 145px;
     margin: 0;
 
@@ -153,7 +171,7 @@
 
     color: $color-default-black;
 
-    @include vp-1023 {
+    @include vp-1279 {
       min-width: 175px;
     }
 
@@ -187,10 +205,31 @@
     line-height: 36px;
 
     color: $color-default-black;
+
+    @include vp-479 {
+      font-size: 20px;
+      line-height: 32px;
+    }
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     color: $color-red-orange;
+  }
+
+  .swiper-button-next {
+    right: 18px;
+
+    @include vp-767 {
+      right: 7px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 18px;
+
+    @include vp-767 {
+      left: 7px;
+    }
   }
 }
